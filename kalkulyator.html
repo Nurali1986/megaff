@@ -26,13 +26,13 @@
           },
           colors: {
             brand: {
-              cream: '#FAF6ED',
-              creamDark: '#F3EBDD',
-              gold: '#B58A44',
-              goldLight: '#DFB743',
-              navy: '#181623',
-              navyCard: '#1F1C2E',
-              border: '#E8DEC8'
+              cream: '#F2F7FF',
+              creamDark: '#E4EEFD',
+              blue: '#2563EB',
+              blueLight: '#60A5FA',
+              navy: '#0B2345',
+              navyCard: '#12213D',
+              border: '#D6E3F6'
             }
           }
         }
@@ -41,37 +41,37 @@
   </script>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="font-sans antialiased text-[#181623] dark:text-[#F3EFE6] transition-colors duration-300">
+<body class="font-sans antialiased text-[#0B2345] dark:text-[#E6EEFA] transition-colors duration-300">
 
   <!-- ================= FLOATING HEADER BAR ================= -->
   <header class="sticky top-3 z-40 w-[96%] max-w-[1600px] mx-auto px-1 sm:px-3 mt-3">
-    <div class="bg-white/95 dark:bg-[#181623]/95 backdrop-blur-md border border-[#EBE3D5] dark:border-[#2D273D] rounded-full px-6 sm:px-8 lg:px-10 py-3.5 shadow-lg flex items-center justify-between gap-4 transition-all">
+    <div class="bg-white/95 dark:bg-[#0B2345]/95 backdrop-blur-md border border-[#DAE6F8] dark:border-[#233652] rounded-full px-6 sm:px-8 lg:px-10 py-3.5 shadow-lg flex items-center justify-between gap-4 transition-all">
       
       <!-- Logo: Mega + Fulfilment -->
       <a href="index.html" class="flex items-center gap-2.5 group shrink-0">
         <img src="Logo.png" alt="MegaFulfilment Logo" class="w-10 h-10 rounded-xl object-contain bg-white p-0.5 shadow-sm group-hover:scale-105 transition">
         <div class="flex items-baseline gap-1">
-          <span class="text-xl font-extrabold tracking-tight font-serif text-[#181623] dark:text-white">Mega</span>
-          <span class="text-xl font-serif italic text-[#B58A44] dark:text-[#DFB743]">Fulfilment</span>
+          <span class="text-xl font-extrabold tracking-tight font-serif text-[#0B2345] dark:text-white">Mega</span>
+          <span class="text-xl font-serif italic text-[#2563EB] dark:text-[#60A5FA]">Fulfilment</span>
         </div>
       </a>
 
       <!-- Desktop Navigation Links -->
-      <nav class="hidden xl:flex items-center justify-center gap-6 2xl:gap-8 text-[13.5px] font-semibold text-[#5A5668] dark:text-slate-300 whitespace-nowrap">
-        <a href="index.html#about" class="hover:text-[#B58A44] transition" data-i18n="nav_about">Biz haqimizda</a>
-        <a href="index.html#services" class="hover:text-[#B58A44] transition" data-i18n="nav_services">Xizmatlar</a>
-        <a href="index.html#calculator" class="hover:text-[#B58A44] transition text-[#B58A44] font-bold" data-i18n="nav_calc">Narxlar kalkulyatori</a>
-        <a href="index.html#storage" class="hover:text-[#B58A44] transition" data-i18n="nav_storage">Saqlaş va hisob</a>
-        <a href="index.html#partners" class="hover:text-[#B58A44] transition" data-i18n="nav_partners">Marketpleyslar</a>
-        <a href="index.html#reviews" class="hover:text-[#B58A44] transition" data-i18n="nav_reviews">Mijozlar fikri</a>
-        <a href="index.html#faq" class="hover:text-[#B58A44] transition" data-i18n="nav_faq">Savol-javob</a>
-        <a href="index.html#contact" class="hover:text-[#B58A44] transition" data-i18n="nav_contact">Boğlaniş</a>
+      <nav class="hidden xl:flex items-center justify-center gap-6 2xl:gap-8 text-[13.5px] font-semibold text-[#475A78] dark:text-slate-300 whitespace-nowrap">
+        <a href="index.html#about" class="hover:text-[#2563EB] transition" data-i18n="nav_about">Biz haqimizda</a>
+        <a href="index.html#services" class="hover:text-[#2563EB] transition" data-i18n="nav_services">Xizmatlar</a>
+        <a href="index.html#calculator" class="hover:text-[#2563EB] transition text-[#2563EB] font-bold" data-i18n="nav_calc">Narxlar kalkulyatori</a>
+        <a href="index.html#storage" class="hover:text-[#2563EB] transition" data-i18n="nav_storage">Saqlaş va hisob</a>
+        <a href="index.html#partners" class="hover:text-[#2563EB] transition" data-i18n="nav_partners">Marketpleyslar</a>
+        <a href="index.html#reviews" class="hover:text-[#2563EB] transition" data-i18n="nav_reviews">Mijozlar fikri</a>
+        <a href="index.html#faq" class="hover:text-[#2563EB] transition" data-i18n="nav_faq">Savol-javob</a>
+        <a href="index.html#contact" class="hover:text-[#2563EB] transition" data-i18n="nav_contact">Boğlaniş</a>
       </nav>
 
       <!-- Right Controls: Dark Mode + 4-Language Switcher + CTA -->
       <div class="flex items-center gap-3 shrink-0">
         <!-- Dark Mode Toggle -->
-        <button id="theme-toggle" onclick="document.documentElement.classList.toggle('dark')" class="w-9 h-9 rounded-full bg-[#FAF6ED] dark:bg-[#252033] border border-[#E2D8C5] dark:border-[#38314B] flex items-center justify-center text-[#5A5668] dark:text-amber-300 hover:border-[#B58A44] transition" title="Dark / Light Mode">
+        <button id="theme-toggle" onclick="document.documentElement.classList.toggle('dark')" class="w-9 h-9 rounded-full bg-[#F2F7FF] dark:bg-[#172947] border border-[#D0DEF4] dark:border-[#2C4264] flex items-center justify-center text-[#475A78] dark:text-sky-300 hover:border-[#2563EB] transition" title="Dark / Light Mode">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
           </svg>
@@ -81,7 +81,7 @@
         <div class="lang-dropdown relative inline-block" id="langDropdown">
           <button
             onclick="toggleLangDropdown(event)"
-            class="flex items-center gap-2 bg-[#FAF6ED] dark:bg-[#252033] border border-[#E2D8C5] dark:border-[#38314B] rounded-full px-3 py-1.5 text-[11px] font-bold text-[#181623] dark:text-white"
+            class="flex items-center gap-2 bg-[#F2F7FF] dark:bg-[#172947] border border-[#D0DEF4] dark:border-[#2C4264] rounded-full px-3 py-1.5 text-[11px] font-bold text-[#0B2345] dark:text-white"
           >
             <span id="currentLangLabel">UZ</span>
             <svg id="langChevron" class="w-3 h-3 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -91,36 +91,36 @@
 
           <div
             id="langMenu"
-            class="hidden absolute right-0 mt-2 z-50 min-w-[110px] bg-[#FAF6ED] dark:bg-[#252033] border border-[#E2D8C5] dark:border-[#38314B] rounded-2xl shadow-lg p-1 text-[11px] font-bold text-[#181623] dark:text-white"
+            class="hidden absolute right-0 mt-2 z-50 min-w-[110px] bg-[#F2F7FF] dark:bg-[#172947] border border-[#D0DEF4] dark:border-[#2C4264] rounded-2xl shadow-lg p-1 text-[11px] font-bold text-[#0B2345] dark:text-white"
           >
-            <button onclick="setLang('uz')" data-lang-btn="uz" class="w-full text-left px-3 py-1.5 rounded-xl transition hover:text-[#B58A44] hover:bg-[#F2EAD8] dark:hover:bg-[#332C47]">UZ</button>
-            <button onclick="setLang('ru')" data-lang-btn="ru" class="w-full text-left px-3 py-1.5 rounded-xl transition hover:text-[#B58A44] hover:bg-[#F2EAD8] dark:hover:bg-[#332C47]">RU</button>
-            <button onclick="setLang('en')" data-lang-btn="en" class="w-full text-left px-3 py-1.5 rounded-xl transition hover:text-[#B58A44] hover:bg-[#F2EAD8] dark:hover:bg-[#332C47]">EN</button>
-            <button onclick="setLang('zh')" data-lang-btn="zh" class="w-full text-left px-3 py-1.5 rounded-xl transition hover:text-[#B58A44] hover:bg-[#F2EAD8] dark:hover:bg-[#332C47]">中文</button>
+            <button onclick="setLang('uz')" data-lang-btn="uz" class="w-full text-left px-3 py-1.5 rounded-xl transition hover:text-[#2563EB] hover:bg-[#E1ECFC] dark:hover:bg-[#273C5E]">UZ</button>
+            <button onclick="setLang('ru')" data-lang-btn="ru" class="w-full text-left px-3 py-1.5 rounded-xl transition hover:text-[#2563EB] hover:bg-[#E1ECFC] dark:hover:bg-[#273C5E]">RU</button>
+            <button onclick="setLang('en')" data-lang-btn="en" class="w-full text-left px-3 py-1.5 rounded-xl transition hover:text-[#2563EB] hover:bg-[#E1ECFC] dark:hover:bg-[#273C5E]">EN</button>
+            <button onclick="setLang('zh')" data-lang-btn="zh" class="w-full text-left px-3 py-1.5 rounded-xl transition hover:text-[#2563EB] hover:bg-[#E1ECFC] dark:hover:bg-[#273C5E]">中文</button>
           </div>
         </div>
 
-        <a href="index.html#calculator" class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#FAF6ED] dark:bg-[#252033] border border-[#E2D8C5] dark:border-[#38314B] text-xs font-bold text-[#181623] dark:text-white hover:border-[#B58A44] transition" data-i18n="v1_cta_calc">
+        <a href="index.html#calculator" class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#F2F7FF] dark:bg-[#172947] border border-[#D0DEF4] dark:border-[#2C4264] text-xs font-bold text-[#0B2345] dark:text-white hover:border-[#2563EB] transition" data-i18n="v1_cta_calc">
           Narxni hisoblaş
         </a>
 
         <!-- Mobile Menu Button -->
-        <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="xl:hidden p-2 rounded-full bg-[#FAF6ED] dark:bg-[#252033] border border-[#E2D8C5] text-[#181623] dark:text-white">
+        <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="xl:hidden p-2 rounded-full bg-[#F2F7FF] dark:bg-[#172947] border border-[#D0DEF4] text-[#0B2345] dark:text-white">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
       </div>
     </div>
 
     <!-- Mobile Drawer -->
-    <div id="mobile-menu" class="hidden xl:hidden mt-2 bg-white dark:bg-[#181623] border border-[#EBE3D5] dark:border-[#2D273D] rounded-2xl p-4 shadow-xl space-y-2 text-sm font-semibold">
-      <a href="index.html#about" class="block p-2 rounded-lg hover:bg-[#FAF6ED] dark:hover:bg-[#252033]" data-i18n="nav_about">Biz haqimizda</a>
-      <a href="index.html#services" class="block p-2 rounded-lg hover:bg-[#FAF6ED] dark:hover:bg-[#252033]" data-i18n="nav_services">Xizmatlar</a>
-      <a href="index.html#calculator" class="block p-2 rounded-lg hover:bg-[#FAF6ED] dark:hover:bg-[#252033] text-[#B58A44]" data-i18n="nav_calc">Narxlar kalkulyatori</a>
-      <a href="index.html#storage" class="block p-2 rounded-lg hover:bg-[#FAF6ED] dark:hover:bg-[#252033]" data-i18n="nav_storage">Saqlaş va hisob</a>
-      <a href="index.html#partners" class="block p-2 rounded-lg hover:bg-[#FAF6ED] dark:hover:bg-[#252033]" data-i18n="nav_partners">Marketpleyslar</a>
-      <a href="index.html#reviews" class="block p-2 rounded-lg hover:bg-[#FAF6ED] dark:hover:bg-[#252033]" data-i18n="nav_reviews">Mijozlar fikri</a>
-      <a href="index.html#faq" class="block p-2 rounded-lg hover:bg-[#FAF6ED] dark:hover:bg-[#252033]" data-i18n="nav_faq">Savol-javob</a>
-      <a href="index.html#contact" class="block p-2 rounded-lg hover:bg-[#FAF6ED] dark:hover:bg-[#252033]" data-i18n="nav_contact">Boğlaniş</a>
+    <div id="mobile-menu" class="hidden xl:hidden mt-2 bg-white dark:bg-[#0B2345] border border-[#DAE6F8] dark:border-[#233652] rounded-2xl p-4 shadow-xl space-y-2 text-sm font-semibold">
+      <a href="index.html#about" class="block p-2 rounded-lg hover:bg-[#F2F7FF] dark:hover:bg-[#172947]" data-i18n="nav_about">Biz haqimizda</a>
+      <a href="index.html#services" class="block p-2 rounded-lg hover:bg-[#F2F7FF] dark:hover:bg-[#172947]" data-i18n="nav_services">Xizmatlar</a>
+      <a href="index.html#calculator" class="block p-2 rounded-lg hover:bg-[#F2F7FF] dark:hover:bg-[#172947] text-[#2563EB]" data-i18n="nav_calc">Narxlar kalkulyatori</a>
+      <a href="index.html#storage" class="block p-2 rounded-lg hover:bg-[#F2F7FF] dark:hover:bg-[#172947]" data-i18n="nav_storage">Saqlaş va hisob</a>
+      <a href="index.html#partners" class="block p-2 rounded-lg hover:bg-[#F2F7FF] dark:hover:bg-[#172947]" data-i18n="nav_partners">Marketpleyslar</a>
+      <a href="index.html#reviews" class="block p-2 rounded-lg hover:bg-[#F2F7FF] dark:hover:bg-[#172947]" data-i18n="nav_reviews">Mijozlar fikri</a>
+      <a href="index.html#faq" class="block p-2 rounded-lg hover:bg-[#F2F7FF] dark:hover:bg-[#172947]" data-i18n="nav_faq">Savol-javob</a>
+      <a href="index.html#contact" class="block p-2 rounded-lg hover:bg-[#F2F7FF] dark:hover:bg-[#172947]" data-i18n="nav_contact">Boğlaniş</a>
     </div>
   </header>
 
@@ -129,7 +129,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
       
       <div class="flex flex-wrap items-center gap-3">
-        <a href="index.html#calculator" class="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#B58A44] hover:underline">
+        <a href="index.html#calculator" class="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#2563EB] hover:underline">
           <i class="ph-duotone ph-arrow-left text-base"></i>
           <span data-i18n="lc_back">Oddiy kalkulyatorga qaytiş</span>
         </a>
@@ -138,11 +138,11 @@
       </div>
 
       <div class="max-w-4xl space-y-4">
-        <h1 class="text-3xl sm:text-5xl font-extrabold text-[#181623] dark:text-white tracking-tight leading-[1.15]">
+        <h1 class="text-3xl sm:text-5xl font-extrabold text-[#0B2345] dark:text-white tracking-tight leading-[1.15]">
           <span data-i18n="lc_titleA">Narxni tõliq şaklda</span>
-          <em class="font-serif italic text-[#B58A44] dark:text-[#DFB743] font-bold" data-i18n="lc_titleB">litrda hisoblaş</em>
+          <em class="font-serif italic text-[#2563EB] dark:text-[#60A5FA] font-bold" data-i18n="lc_titleB">litrda hisoblaş</em>
         </h1>
-        <p class="text-sm sm:text-base text-[#5A5668] dark:text-slate-300 leading-relaxed" data-i18n="lc_lead">
+        <p class="text-sm sm:text-base text-[#475A78] dark:text-slate-300 leading-relaxed" data-i18n="lc_lead">
           Tovar õlçamini va sonini kiriting — narx darhol hisoblanadi. Asosiy xizmat (bir dona ştrix kod qiliş) va saralaş narxga avtomatik kiradi, qolgan xizmatlarni xohişingizga qarab qõşasiz. 10 donadan kam buyurtmada minimal summa — 20 000 sõm.
         </p>
       </div>
@@ -150,30 +150,30 @@
       <!-- 3-Step How-To Cards -->
       <ol class="grid md:grid-cols-3 gap-4 pt-2">
         <li class="floating-card p-4 flex items-start gap-3.5">
-          <span class="w-10 h-10 rounded-xl bg-[#F3EBDD] dark:bg-[#282236] text-[#B58A44] flex items-center justify-center shrink-0 text-xl">
+          <span class="w-10 h-10 rounded-xl bg-[#E4EEFD] dark:bg-[#1A2D4D] text-[#2563EB] flex items-center justify-center shrink-0 text-xl">
             <i class="ph-duotone ph-ruler"></i>
           </span>
           <div class="text-xs sm:text-sm">
-            <b class="block text-[#181623] dark:text-white font-bold" data-i18n="lc_h1t">1. Õlçam</b>
-            <span class="text-[#5A5668] dark:text-slate-400" data-i18n="lc_h1d">Uzunlik × kenglik × balandlik → 4 toifadan biri</span>
+            <b class="block text-[#0B2345] dark:text-white font-bold" data-i18n="lc_h1t">1. Õlçam</b>
+            <span class="text-[#475A78] dark:text-slate-400" data-i18n="lc_h1d">Uzunlik × kenglik × balandlik → 4 toifadan biri</span>
           </div>
         </li>
         <li class="floating-card p-4 flex items-start gap-3.5">
-          <span class="w-10 h-10 rounded-xl bg-[#F3EBDD] dark:bg-[#282236] text-[#B58A44] flex items-center justify-center shrink-0 text-xl">
+          <span class="w-10 h-10 rounded-xl bg-[#E4EEFD] dark:bg-[#1A2D4D] text-[#2563EB] flex items-center justify-center shrink-0 text-xl">
             <i class="ph-duotone ph-stack"></i>
           </span>
           <div class="text-xs sm:text-sm">
-            <b class="block text-[#181623] dark:text-white font-bold" data-i18n="lc_h2t">2. Miqdor</b>
-            <span class="text-[#5A5668] dark:text-slate-400" data-i18n="lc_h2d">10, 100 yoki 1000 tagaça — qança kõp bõlsa, şunça arzon</span>
+            <b class="block text-[#0B2345] dark:text-white font-bold" data-i18n="lc_h2t">2. Miqdor</b>
+            <span class="text-[#475A78] dark:text-slate-400" data-i18n="lc_h2d">10, 100 yoki 1000 tagaça — qança kõp bõlsa, şunça arzon</span>
           </div>
         </li>
         <li class="floating-card p-4 flex items-start gap-3.5">
-          <span class="w-10 h-10 rounded-xl bg-[#F3EBDD] dark:bg-[#282236] text-[#B58A44] flex items-center justify-center shrink-0 text-xl">
+          <span class="w-10 h-10 rounded-xl bg-[#E4EEFD] dark:bg-[#1A2D4D] text-[#2563EB] flex items-center justify-center shrink-0 text-xl">
             <i class="ph-duotone ph-plus-circle"></i>
           </span>
           <div class="text-xs sm:text-sm">
-            <b class="block text-[#181623] dark:text-white font-bold" data-i18n="lc_h3t">3. Qõşimça</b>
-            <span class="text-[#5A5668] dark:text-slate-400" data-i18n="lc_h3d">Kerakli xizmatlarni tanlang</span>
+            <b class="block text-[#0B2345] dark:text-white font-bold" data-i18n="lc_h3t">3. Qõşimça</b>
+            <span class="text-[#475A78] dark:text-slate-400" data-i18n="lc_h3d">Kerakli xizmatlarni tanlang</span>
           </div>
         </li>
       </ol>
@@ -193,17 +193,17 @@
           
           <!-- STEP 1: Tovar o'lchami -->
           <section class="floating-card p-6 sm:p-7 space-y-5">
-            <header class="flex flex-wrap items-center justify-between gap-4 border-b border-[#EBE3D5] dark:border-[#2D273D] pb-4">
+            <header class="flex flex-wrap items-center justify-between gap-4 border-b border-[#DAE6F8] dark:border-[#233652] pb-4">
               <div class="flex items-center gap-3.5">
-                <span class="w-9 h-9 rounded-full bg-[#B58A44] text-white font-extrabold text-sm flex items-center justify-center shrink-0">1</span>
+                <span class="w-9 h-9 rounded-full bg-[#2563EB] text-white font-extrabold text-sm flex items-center justify-center shrink-0">1</span>
                 <div>
-                  <h3 class="text-base sm:text-lg font-extrabold text-[#181623] dark:text-white" data-i18n="lc_s1t">Tovar õlçami</h3>
-                  <p class="text-xs text-[#6E6A7C] dark:text-slate-400" data-i18n="lc_s1d">Bitta dona tovarning qadoqdagi õlçami</p>
+                  <h3 class="text-base sm:text-lg font-extrabold text-[#0B2345] dark:text-white" data-i18n="lc_s1t">Tovar õlçami</h3>
+                  <p class="text-xs text-[#5B6D8A] dark:text-slate-400" data-i18n="lc_s1d">Bitta dona tovarning qadoqdagi õlçami</p>
                 </div>
               </div>
 
               <!-- Segmented Mode Switcher: Santimetrda / Litrda -->
-              <div class="inline-flex p-1 rounded-xl bg-[#F3EBDD] dark:bg-[#252033] border border-[#E2D8C5] dark:border-[#38314B]" id="modeSeg" role="group">
+              <div class="inline-flex p-1 rounded-xl bg-[#E4EEFD] dark:bg-[#172947] border border-[#D0DEF4] dark:border-[#2C4264]" id="modeSeg" role="group">
                 <button type="button" data-mode="cm" aria-pressed="true" onclick="setLcMode('cm')" class="lc-seg-btn active px-3.5 py-1.5 rounded-lg text-xs font-bold transition" data-i18n="lc_modeCm">Santimetrda</button>
                 <button type="button" data-mode="l" aria-pressed="false" onclick="setLcMode('l')" class="lc-seg-btn px-3.5 py-1.5 rounded-lg text-xs font-bold transition" data-i18n="lc_modeL">Litrda</button>
               </div>
@@ -212,24 +212,24 @@
             <!-- Dimensions in CM -->
             <div class="grid sm:grid-cols-3 gap-4" id="dimsCm">
               <label class="block space-y-1.5">
-                <span class="text-xs font-bold text-[#181623] dark:text-white" data-i18n="lc_len">Uzunlik</span>
+                <span class="text-xs font-bold text-[#0B2345] dark:text-white" data-i18n="lc_len">Uzunlik</span>
                 <span class="relative flex items-center">
-                  <input id="dimL" type="number" value="20" min="1" step="1" inputmode="decimal" oninput="recalcLc()" class="w-full pl-4 pr-12 py-3 rounded-xl border border-[#DCD3C3] dark:border-slate-700 bg-white dark:bg-[#110F18] text-sm font-extrabold focus:outline-none focus:border-[#B58A44]">
-                  <i class="not-italic text-xs font-bold text-[#8E887C] absolute right-3.5" data-i18n="lc_cm">sm</i>
+                  <input id="dimL" type="number" value="20" min="1" step="1" inputmode="decimal" oninput="recalcLc()" class="w-full pl-4 pr-12 py-3 rounded-xl border border-[#CDDBF0] dark:border-slate-700 bg-white dark:bg-[#081326] text-sm font-extrabold focus:outline-none focus:border-[#2563EB]">
+                  <i class="not-italic text-xs font-bold text-[#7B8CA6] absolute right-3.5" data-i18n="lc_cm">sm</i>
                 </span>
               </label>
               <label class="block space-y-1.5">
-                <span class="text-xs font-bold text-[#181623] dark:text-white" data-i18n="lc_wid">Kenglik</span>
+                <span class="text-xs font-bold text-[#0B2345] dark:text-white" data-i18n="lc_wid">Kenglik</span>
                 <span class="relative flex items-center">
-                  <input id="dimW" type="number" value="15" min="1" step="1" inputmode="decimal" oninput="recalcLc()" class="w-full pl-4 pr-12 py-3 rounded-xl border border-[#DCD3C3] dark:border-slate-700 bg-white dark:bg-[#110F18] text-sm font-extrabold focus:outline-none focus:border-[#B58A44]">
-                  <i class="not-italic text-xs font-bold text-[#8E887C] absolute right-3.5" data-i18n="lc_cm">sm</i>
+                  <input id="dimW" type="number" value="15" min="1" step="1" inputmode="decimal" oninput="recalcLc()" class="w-full pl-4 pr-12 py-3 rounded-xl border border-[#CDDBF0] dark:border-slate-700 bg-white dark:bg-[#081326] text-sm font-extrabold focus:outline-none focus:border-[#2563EB]">
+                  <i class="not-italic text-xs font-bold text-[#7B8CA6] absolute right-3.5" data-i18n="lc_cm">sm</i>
                 </span>
               </label>
               <label class="block space-y-1.5">
-                <span class="text-xs font-bold text-[#181623] dark:text-white" data-i18n="lc_hei">Balandlik</span>
+                <span class="text-xs font-bold text-[#0B2345] dark:text-white" data-i18n="lc_hei">Balandlik</span>
                 <span class="relative flex items-center">
-                  <input id="dimH" type="number" value="10" min="1" step="1" inputmode="decimal" oninput="recalcLc()" class="w-full pl-4 pr-12 py-3 rounded-xl border border-[#DCD3C3] dark:border-slate-700 bg-white dark:bg-[#110F18] text-sm font-extrabold focus:outline-none focus:border-[#B58A44]">
-                  <i class="not-italic text-xs font-bold text-[#8E887C] absolute right-3.5" data-i18n="lc_cm">sm</i>
+                  <input id="dimH" type="number" value="10" min="1" step="1" inputmode="decimal" oninput="recalcLc()" class="w-full pl-4 pr-12 py-3 rounded-xl border border-[#CDDBF0] dark:border-slate-700 bg-white dark:bg-[#081326] text-sm font-extrabold focus:outline-none focus:border-[#2563EB]">
+                  <i class="not-italic text-xs font-bold text-[#7B8CA6] absolute right-3.5" data-i18n="lc_cm">sm</i>
                 </span>
               </label>
             </div>
@@ -237,10 +237,10 @@
             <!-- Dimensions in Liters -->
             <div class="hidden" id="dimsL">
               <label class="block space-y-1.5 max-w-xs">
-                <span class="text-xs font-bold text-[#181623] dark:text-white" data-i18n="lc_vol">Hajm</span>
+                <span class="text-xs font-bold text-[#0B2345] dark:text-white" data-i18n="lc_vol">Hajm</span>
                 <span class="relative flex items-center">
-                  <input id="dimLit" type="number" value="3" min="0.1" step="0.5" inputmode="decimal" oninput="recalcLc()" class="w-full pl-4 pr-14 py-3 rounded-xl border border-[#DCD3C3] dark:border-slate-700 bg-white dark:bg-[#110F18] text-sm font-extrabold focus:outline-none focus:border-[#B58A44]">
-                  <i class="not-italic text-xs font-bold text-[#8E887C] absolute right-3.5" data-i18n="lc_l">litr</i>
+                  <input id="dimLit" type="number" value="3" min="0.1" step="0.5" inputmode="decimal" oninput="recalcLc()" class="w-full pl-4 pr-14 py-3 rounded-xl border border-[#CDDBF0] dark:border-slate-700 bg-white dark:bg-[#081326] text-sm font-extrabold focus:outline-none focus:border-[#2563EB]">
+                  <i class="not-italic text-xs font-bold text-[#7B8CA6] absolute right-3.5" data-i18n="lc_l">litr</i>
                 </span>
               </label>
             </div>
@@ -248,10 +248,10 @@
             <!-- Calculated Volume Readout -->
             <div class="flex items-center justify-between text-xs sm:text-sm pt-1">
               <div>
-                <span class="text-[#5A5668] dark:text-slate-400" data-i18n="lc_vol">Hajm</span>:
-                <b class="text-[#B58A44] font-extrabold text-base ml-1"><span id="volOut">3</span> <span data-i18n="lc_lShort">l</span></b>
+                <span class="text-[#475A78] dark:text-slate-400" data-i18n="lc_vol">Hajm</span>:
+                <b class="text-[#2563EB] font-extrabold text-base ml-1"><span id="volOut">3</span> <span data-i18n="lc_lShort">l</span></b>
               </div>
-              <span id="catActiveBadge" class="px-3 py-1 rounded-full bg-[#F3EBDD] dark:bg-[#282236] text-[#B58A44] font-extrabold text-xs">1-toifa (0 – 5 l)</span>
+              <span id="catActiveBadge" class="px-3 py-1 rounded-full bg-[#E4EEFD] dark:bg-[#1A2D4D] text-[#2563EB] font-extrabold text-xs">1-toifa (0 – 5 l)</span>
             </div>
 
             <!-- 4-Category Visual Scale -->
@@ -266,11 +266,11 @@
 
           <!-- STEP 2: Mahsulot soni -->
           <section class="floating-card p-6 sm:p-7 space-y-5">
-            <header class="flex items-center gap-3.5 border-b border-[#EBE3D5] dark:border-[#2D273D] pb-4">
-              <span class="w-9 h-9 rounded-full bg-[#B58A44] text-white font-extrabold text-sm flex items-center justify-center shrink-0">2</span>
+            <header class="flex items-center gap-3.5 border-b border-[#DAE6F8] dark:border-[#233652] pb-4">
+              <span class="w-9 h-9 rounded-full bg-[#2563EB] text-white font-extrabold text-sm flex items-center justify-center shrink-0">2</span>
               <div>
-                <h3 class="text-base sm:text-lg font-extrabold text-[#181623] dark:text-white" data-i18n="lc_s2t">Mahsulot soni</h3>
-                <p class="text-xs text-[#6E6A7C] dark:text-slate-400" data-i18n="lc_s2d">Qança kõp bõlsa, bir dona uçun narx şunça arzon</p>
+                <h3 class="text-base sm:text-lg font-extrabold text-[#0B2345] dark:text-white" data-i18n="lc_s2t">Mahsulot soni</h3>
+                <p class="text-xs text-[#5B6D8A] dark:text-slate-400" data-i18n="lc_s2d">Qança kõp bõlsa, bir dona uçun narx şunça arzon</p>
               </div>
             </header>
 
@@ -278,28 +278,28 @@
               <!-- Stepper Box -->
               <div id="qtyBox" class="flex items-center gap-2">
                 <button type="button" onclick="stepLcQty(-10)" class="step-btn w-10 h-10 text-base">−</button>
-                <input type="number" id="lcQtyInput" value="100" min="1" step="10" oninput="recalcLc()" class="w-28 px-3 py-2.5 text-center rounded-xl border border-[#DCD3C3] dark:border-slate-700 bg-white dark:bg-[#110F18] text-base font-extrabold focus:outline-none focus:border-[#B58A44]">
+                <input type="number" id="lcQtyInput" value="100" min="1" step="10" oninput="recalcLc()" class="w-28 px-3 py-2.5 text-center rounded-xl border border-[#CDDBF0] dark:border-slate-700 bg-white dark:bg-[#081326] text-base font-extrabold focus:outline-none focus:border-[#2563EB]">
                 <button type="button" onclick="stepLcQty(10)" class="step-btn w-10 h-10 text-base">+</button>
               </div>
 
               <!-- Quick Preset Chips -->
               <div class="flex flex-wrap items-center gap-2" id="lcChips">
-                <button type="button" onclick="setLcQty(10)" class="lc-chip px-3.5 py-2 rounded-xl border border-[#E2D8C5] dark:border-[#38314B] bg-[#FAF6ED] dark:bg-[#252033] text-xs font-extrabold hover:border-[#B58A44] transition" data-qty="10">10</button>
-                <button type="button" onclick="setLcQty(100)" class="lc-chip px-3.5 py-2 rounded-xl border border-[#E2D8C5] dark:border-[#38314B] bg-[#FAF6ED] dark:bg-[#252033] text-xs font-extrabold hover:border-[#B58A44] transition" data-qty="100">100</button>
-                <button type="button" onclick="setLcQty(500)" class="lc-chip px-3.5 py-2 rounded-xl border border-[#E2D8C5] dark:border-[#38314B] bg-[#FAF6ED] dark:bg-[#252033] text-xs font-extrabold hover:border-[#B58A44] transition" data-qty="500">500</button>
-                <button type="button" onclick="setLcQty(1000)" class="lc-chip px-3.5 py-2 rounded-xl border border-[#E2D8C5] dark:border-[#38314B] bg-[#FAF6ED] dark:bg-[#252033] text-xs font-extrabold hover:border-[#B58A44] transition" data-qty="1000">1 000</button>
+                <button type="button" onclick="setLcQty(10)" class="lc-chip px-3.5 py-2 rounded-xl border border-[#D0DEF4] dark:border-[#2C4264] bg-[#F2F7FF] dark:bg-[#172947] text-xs font-extrabold hover:border-[#2563EB] transition" data-qty="10">10</button>
+                <button type="button" onclick="setLcQty(100)" class="lc-chip px-3.5 py-2 rounded-xl border border-[#D0DEF4] dark:border-[#2C4264] bg-[#F2F7FF] dark:bg-[#172947] text-xs font-extrabold hover:border-[#2563EB] transition" data-qty="100">100</button>
+                <button type="button" onclick="setLcQty(500)" class="lc-chip px-3.5 py-2 rounded-xl border border-[#D0DEF4] dark:border-[#2C4264] bg-[#F2F7FF] dark:bg-[#172947] text-xs font-extrabold hover:border-[#2563EB] transition" data-qty="500">500</button>
+                <button type="button" onclick="setLcQty(1000)" class="lc-chip px-3.5 py-2 rounded-xl border border-[#D0DEF4] dark:border-[#2C4264] bg-[#F2F7FF] dark:bg-[#172947] text-xs font-extrabold hover:border-[#2563EB] transition" data-qty="1000">1 000</button>
               </div>
             </div>
 
-            <div class="p-3.5 rounded-xl bg-[#FAF6ED] dark:bg-[#231F31] border border-[#EBE3D5] dark:border-[#342E47] flex flex-wrap items-center justify-between gap-2 text-xs sm:text-sm">
+            <div class="p-3.5 rounded-xl bg-[#F2F7FF] dark:bg-[#152644] border border-[#DAE6F8] dark:border-[#2A3F61] flex flex-wrap items-center justify-between gap-2 text-xs sm:text-sm">
               <div class="flex items-center gap-2">
-                <i class="ph-duotone ph-chart-bar text-[#B58A44] text-lg"></i>
-                <span class="text-[#5A5668] dark:text-slate-300" data-i18n="lc_tierLbl">Daraja</span>:
-                <b id="tierOut" class="text-[#181623] dark:text-white font-extrabold">100 tagaça</b>
+                <i class="ph-duotone ph-chart-bar text-[#2563EB] text-lg"></i>
+                <span class="text-[#475A78] dark:text-slate-300" data-i18n="lc_tierLbl">Daraja</span>:
+                <b id="tierOut" class="text-[#0B2345] dark:text-white font-extrabold">100 tagaça</b>
               </div>
               <div>
-                <span class="text-[#5A5668] dark:text-slate-300" data-i18n="lc_calcLbl">Hisoblangan narx</span>:
-                <b id="inlineTotal" class="text-[#B58A44] font-extrabold ml-1">0 sõm</b>
+                <span class="text-[#475A78] dark:text-slate-300" data-i18n="lc_calcLbl">Hisoblangan narx</span>:
+                <b id="inlineTotal" class="text-[#2563EB] font-extrabold ml-1">0 sõm</b>
               </div>
             </div>
 
@@ -308,11 +308,11 @@
 
           <!-- STEP 3: Qo'shimcha xizmatlar -->
           <section class="floating-card p-6 sm:p-7 space-y-5">
-            <header class="flex items-center gap-3.5 border-b border-[#EBE3D5] dark:border-[#2D273D] pb-4">
-              <span class="w-9 h-9 rounded-full bg-[#B58A44] text-white font-extrabold text-sm flex items-center justify-center shrink-0">3</span>
+            <header class="flex items-center gap-3.5 border-b border-[#DAE6F8] dark:border-[#233652] pb-4">
+              <span class="w-9 h-9 rounded-full bg-[#2563EB] text-white font-extrabold text-sm flex items-center justify-center shrink-0">3</span>
               <div>
-                <h3 class="text-base sm:text-lg font-extrabold text-[#181623] dark:text-white" data-i18n="lc_s3t">Qõşimça xizmatlar</h3>
-                <p class="text-xs text-[#6E6A7C] dark:text-slate-400" data-i18n="lc_s3d">Agar biror xizmat qõşmoqçi bõlsangiz, pastdagi xizmatlarni tanlang</p>
+                <h3 class="text-base sm:text-lg font-extrabold text-[#0B2345] dark:text-white" data-i18n="lc_s3t">Qõşimça xizmatlar</h3>
+                <p class="text-xs text-[#5B6D8A] dark:text-slate-400" data-i18n="lc_s3d">Agar biror xizmat qõşmoqçi bõlsangiz, pastdagi xizmatlarni tanlang</p>
               </div>
             </header>
 
@@ -323,10 +323,10 @@
 
         <!-- Right Summary Card (4 cols, Contained Inside Calculator Window) -->
         <aside class="lg:col-span-4 w-full" aria-live="polite">
-          <div class="bg-[#181623] text-white rounded-3xl p-6 sm:p-7 shadow-2xl space-y-5 border border-[#2D283D]">
+          <div class="bg-[#0B2345] text-white rounded-3xl p-6 sm:p-7 shadow-2xl space-y-5 border border-[#233652]">
             
             <div class="flex flex-wrap items-center gap-2">
-              <span class="px-3 py-1 rounded-full bg-[#DFB743]/15 text-[#DFB743] border border-[#DFB743]/30 text-xs font-extrabold" id="lcCat">1-toifa</span>
+              <span class="px-3 py-1 rounded-full bg-[#60A5FA]/15 text-[#60A5FA] border border-[#60A5FA]/30 text-xs font-extrabold" id="lcCat">1-toifa</span>
               <span class="px-3 py-1 rounded-full bg-white/10 text-slate-200 text-xs font-bold" id="lcTier">Daraja: 100 tagaça</span>
             </div>
 
@@ -335,28 +335,28 @@
               <div class="text-xl sm:text-2xl font-extrabold text-white" id="lcPerItem">1 000 sõm</div>
             </div>
 
-            <div class="pt-3 border-t border-[#2D283D] space-y-1">
+            <div class="pt-3 border-t border-[#233652] space-y-1">
               <div class="text-xs uppercase tracking-wider text-slate-400 font-bold">
                 <span data-i18n="lc_total">Jami</span> · <span id="lcCount" class="text-white">100</span> <span data-i18n="lc_pcs">dona</span>
               </div>
-              <div class="text-3xl sm:text-4xl font-extrabold text-[#DFB743] font-serif leading-tight">
+              <div class="text-3xl sm:text-4xl font-extrabold text-[#60A5FA] font-serif leading-tight">
                 <span id="lcTotal">100 000</span> <small class="text-base font-sans font-bold text-slate-300" data-i18n="currency">sõm</small>
               </div>
             </div>
 
             <!-- Detailed Service Breakdown -->
-            <div class="pt-3 border-t border-[#2D283D] space-y-2 text-xs" id="lcBreakdown"></div>
+            <div class="pt-3 border-t border-[#233652] space-y-2 text-xs" id="lcBreakdown"></div>
 
             <p class="text-xs text-slate-400 leading-relaxed pt-1" data-i18n="lc_note">
               Narxlar maqul kelgan bõlsa, biz bilan boğlaning
             </p>
 
             <div class="space-y-3 pt-1">
-              <a href="index.html#contact" class="w-full gold-gradient-btn rounded-xl py-3.5 flex items-center justify-center gap-2 text-sm shadow-lg text-[#181623]">
+              <a href="index.html#contact" class="w-full primary-gradient-btn rounded-xl py-3.5 flex items-center justify-center gap-2 text-sm shadow-lg text-[#0B2345]">
                 <i class="ph-duotone ph-phone text-lg"></i>
                 <span data-i18n="lc_contact">Biz bilan boğlaniş</span>
               </a>
-              <a href="#prices" class="w-full py-2.5 rounded-xl border border-white/10 hover:border-[#DFB743]/50 text-slate-300 hover:text-[#DFB743] text-xs font-bold flex items-center justify-center gap-1.5 transition">
+              <a href="#prices" class="w-full py-2.5 rounded-xl border border-white/10 hover:border-[#60A5FA]/50 text-slate-300 hover:text-[#60A5FA] text-xs font-bold flex items-center justify-center gap-1.5 transition">
                 <span data-i18n="lc_tableLink">Narxlar jadvali</span>
                 <i class="ph-duotone ph-arrow-down"></i>
               </a>
@@ -370,23 +370,23 @@
   </section>
 
   <!-- ================= NARXLAR JADVALI (#prices) ================= -->
-  <section class="py-20 border-t border-[#E8DEC8] dark:border-[#2D273D]" id="prices">
+  <section class="py-20 border-t border-[#D6E3F6] dark:border-[#233652]" id="prices">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
       
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
         <div class="space-y-3 max-w-2xl">
           <span class="badge-pill" data-i18n="lc_ptTag">NARXLAR JADVALI</span>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#181623] dark:text-white font-sans">
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-[#0B2345] dark:text-white font-sans">
             <span data-i18n="lc_ptA">Toifa bõyiça</span>
-            <em class="font-serif italic text-[#B58A44] dark:text-[#DFB743]" data-i18n="lc_ptB">1 dona narxi</em>
+            <em class="font-serif italic text-[#2563EB] dark:text-[#60A5FA]" data-i18n="lc_ptB">1 dona narxi</em>
           </h2>
-          <p class="text-xs sm:text-sm text-[#5A5668] dark:text-slate-300" data-i18n="lc_ptLead">
+          <p class="text-xs sm:text-sm text-[#475A78] dark:text-slate-300" data-i18n="lc_ptLead">
             Narxlar sõmda, bitta dona uçun. Siz tanlagan toifa ustuni ajratib kõrsatilgan.
           </p>
         </div>
 
         <!-- Tier Tabs: 10 tagacha | 100 tagacha | 1000 tagacha -->
-        <div class="inline-flex p-1.5 rounded-2xl bg-[#F3EBDD] dark:bg-[#252033] border border-[#E2D8C5] dark:border-[#38314B] self-start" id="ptTabs" role="group">
+        <div class="inline-flex p-1.5 rounded-2xl bg-[#E4EEFD] dark:bg-[#172947] border border-[#D0DEF4] dark:border-[#2C4264] self-start" id="ptTabs" role="group">
           <button type="button" onclick="setPtTier(0)" aria-pressed="false" class="pt-tab-btn px-4 py-2 rounded-xl text-xs font-extrabold transition" data-i18n="lc_tier1">10 tagaça</button>
           <button type="button" onclick="setPtTier(1)" aria-pressed="true" class="pt-tab-btn active px-4 py-2 rounded-xl text-xs font-extrabold transition" data-i18n="lc_tier2">100 tagaça</button>
           <button type="button" onclick="setPtTier(2)" aria-pressed="false" class="pt-tab-btn px-4 py-2 rounded-xl text-xs font-extrabold transition" data-i18n="lc_tier3">1000 tagaça</button>
@@ -396,7 +396,7 @@
       <div class="floating-card overflow-hidden">
         <div class="overflow-x-auto">
           <table class="w-full text-left border-collapse text-xs sm:text-sm">
-            <thead id="ptHead" class="bg-[#F3EBDD]/70 dark:bg-[#252033] text-[#181623] dark:text-white font-extrabold border-b border-[#E2D8C5] dark:border-[#38314B]">
+            <thead id="ptHead" class="bg-[#E4EEFD]/70 dark:bg-[#172947] text-[#0B2345] dark:text-white font-extrabold border-b border-[#D0DEF4] dark:border-[#2C4264]">
               <tr>
                 <th class="p-4 sm:p-5" data-i18n="lc_ptSvc">Xizmat</th>
                 <th class="p-4 sm:p-5 text-center" data-cat-col="1">1-toifa (0–5 l)</th>
@@ -405,7 +405,7 @@
                 <th class="p-4 sm:p-5 text-center" data-cat-col="4">4-toifa (100–200 l)</th>
               </tr>
             </thead>
-            <tbody id="ptBody" class="divide-y divide-[#EBE3D5] dark:divide-[#2D273D]"></tbody>
+            <tbody id="ptBody" class="divide-y divide-[#DAE6F8] dark:divide-[#233652]"></tbody>
           </table>
         </div>
       </div>
@@ -414,49 +414,49 @@
   </section>
 
   <!-- ================= FOOTER ================= -->
-  <footer class="py-12 border-t border-[#E8DEC8] dark:border-[#2D273D] text-xs text-[#5A5668] dark:text-slate-400">
+  <footer class="py-12 border-t border-[#D6E3F6] dark:border-[#233652] text-xs text-[#475A78] dark:text-slate-400">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
       
       <div class="flex flex-wrap items-center justify-center gap-3.5">
-        <a href="https://t.me/megaffuz" target="_blank" rel="noopener" class="inline-flex items-center gap-3 pl-2 pr-6 py-2 rounded-full border border-[#E2DDD5] dark:border-slate-700 bg-white dark:bg-[#1B1826] text-sm font-medium text-[#181623] dark:text-white hover:border-[#B58A44] hover:shadow-md transition shadow-sm">
-          <span class="w-9 h-9 rounded-full bg-white dark:bg-[#252033] border border-slate-200/80 dark:border-slate-700 shadow-sm flex items-center justify-center shrink-0">
+        <a href="https://t.me/megaffuz" target="_blank" rel="noopener" class="inline-flex items-center gap-3 pl-2 pr-6 py-2 rounded-full border border-[#D9E4F5] dark:border-slate-700 bg-white dark:bg-[#0F1D36] text-sm font-medium text-[#0B2345] dark:text-white hover:border-[#2563EB] hover:shadow-md transition shadow-sm">
+          <span class="w-9 h-9 rounded-full bg-white dark:bg-[#172947] border border-slate-200/80 dark:border-slate-700 shadow-sm flex items-center justify-center shrink-0">
             <img src="assets/icon-telegram.png" alt="Telegram" class="w-5 h-5 object-contain">
           </span>
           <span>Telegram</span>
         </a>
-        <a href="https://instagram.com/megaff.uz" target="_blank" rel="noopener" class="inline-flex items-center gap-3 pl-2 pr-6 py-2 rounded-full border border-[#E2DDD5] dark:border-slate-700 bg-white dark:bg-[#1B1826] text-sm font-medium text-[#181623] dark:text-white hover:border-[#B58A44] hover:shadow-md transition shadow-sm">
-          <span class="w-9 h-9 rounded-full bg-white dark:bg-[#252033] border border-slate-200/80 dark:border-slate-700 shadow-sm flex items-center justify-center shrink-0">
+        <a href="https://instagram.com/megaff.uz" target="_blank" rel="noopener" class="inline-flex items-center gap-3 pl-2 pr-6 py-2 rounded-full border border-[#D9E4F5] dark:border-slate-700 bg-white dark:bg-[#0F1D36] text-sm font-medium text-[#0B2345] dark:text-white hover:border-[#2563EB] hover:shadow-md transition shadow-sm">
+          <span class="w-9 h-9 rounded-full bg-white dark:bg-[#172947] border border-slate-200/80 dark:border-slate-700 shadow-sm flex items-center justify-center shrink-0">
             <img src="assets/icon-instagram.png" alt="Instagram" class="w-5 h-5 object-contain">
           </span>
           <span>Instagram</span>
         </a>
-        <a href="https://wa.me/998959808817" target="_blank" rel="noopener" class="inline-flex items-center gap-3 pl-2 pr-6 py-2 rounded-full border border-[#E2DDD5] dark:border-slate-700 bg-white dark:bg-[#1B1826] text-sm font-medium text-[#181623] dark:text-white hover:border-[#B58A44] hover:shadow-md transition shadow-sm">
-          <span class="w-9 h-9 rounded-full bg-white dark:bg-[#252033] border border-slate-200/80 dark:border-slate-700 shadow-sm flex items-center justify-center shrink-0">
+        <a href="https://wa.me/998959808817" target="_blank" rel="noopener" class="inline-flex items-center gap-3 pl-2 pr-6 py-2 rounded-full border border-[#D9E4F5] dark:border-slate-700 bg-white dark:bg-[#0F1D36] text-sm font-medium text-[#0B2345] dark:text-white hover:border-[#2563EB] hover:shadow-md transition shadow-sm">
+          <span class="w-9 h-9 rounded-full bg-white dark:bg-[#172947] border border-slate-200/80 dark:border-slate-700 shadow-sm flex items-center justify-center shrink-0">
             <img src="assets/icon-whatsapp.png" alt="WhatsApp" class="w-5 h-5 object-contain">
           </span>
           <span>WhatsApp</span>
         </a>
-        <a href="tel:+998959808817" class="inline-flex items-center gap-3 pl-2 pr-6 py-2 rounded-full border border-[#E2DDD5] dark:border-slate-700 bg-white dark:bg-[#1B1826] text-sm font-medium text-[#181623] dark:text-white hover:border-[#B58A44] hover:shadow-md transition shadow-sm">
-          <span class="w-9 h-9 rounded-full bg-white dark:bg-[#252033] border border-slate-200/80 dark:border-slate-700 shadow-sm flex items-center justify-center shrink-0">
+        <a href="tel:+998959808817" class="inline-flex items-center gap-3 pl-2 pr-6 py-2 rounded-full border border-[#D9E4F5] dark:border-slate-700 bg-white dark:bg-[#0F1D36] text-sm font-medium text-[#0B2345] dark:text-white hover:border-[#2563EB] hover:shadow-md transition shadow-sm">
+          <span class="w-9 h-9 rounded-full bg-white dark:bg-[#172947] border border-slate-200/80 dark:border-slate-700 shadow-sm flex items-center justify-center shrink-0">
             <svg class="w-4 h-4 text-[#22C55E]" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"/></svg>
           </span>
           <span>Telefon</span>
         </a>
-        <a href="https://youtube.com/@megaffuz" target="_blank" rel="noopener" class="inline-flex items-center gap-3 pl-2 pr-6 py-2 rounded-full border border-[#E2DDD5] dark:border-slate-700 bg-white dark:bg-[#1B1826] text-sm font-medium text-[#181623] dark:text-white hover:border-[#B58A44] hover:shadow-md transition shadow-sm">
-          <span class="w-9 h-9 rounded-full bg-white dark:bg-[#252033] border border-slate-200/80 dark:border-slate-700 shadow-sm flex items-center justify-center shrink-0">
+        <a href="https://youtube.com/@megaffuz" target="_blank" rel="noopener" class="inline-flex items-center gap-3 pl-2 pr-6 py-2 rounded-full border border-[#D9E4F5] dark:border-slate-700 bg-white dark:bg-[#0F1D36] text-sm font-medium text-[#0B2345] dark:text-white hover:border-[#2563EB] hover:shadow-md transition shadow-sm">
+          <span class="w-9 h-9 rounded-full bg-white dark:bg-[#172947] border border-slate-200/80 dark:border-slate-700 shadow-sm flex items-center justify-center shrink-0">
             <img src="assets/icon-youtube.png" alt="YouTube" class="w-5 h-5 object-contain">
           </span>
           <span>YouTube</span>
         </a>
-        <a href="https://facebook.com/megaff.uz" target="_blank" rel="noopener" class="inline-flex items-center gap-3 pl-2 pr-6 py-2 rounded-full border border-[#E2DDD5] dark:border-slate-700 bg-white dark:bg-[#1B1826] text-sm font-medium text-[#181623] dark:text-white hover:border-[#B58A44] hover:shadow-md transition shadow-sm">
-          <span class="w-9 h-9 rounded-full bg-white dark:bg-[#252033] border border-slate-200/80 dark:border-slate-700 shadow-sm flex items-center justify-center shrink-0">
+        <a href="https://facebook.com/megaff.uz" target="_blank" rel="noopener" class="inline-flex items-center gap-3 pl-2 pr-6 py-2 rounded-full border border-[#D9E4F5] dark:border-slate-700 bg-white dark:bg-[#0F1D36] text-sm font-medium text-[#0B2345] dark:text-white hover:border-[#2563EB] hover:shadow-md transition shadow-sm">
+          <span class="w-9 h-9 rounded-full bg-white dark:bg-[#172947] border border-slate-200/80 dark:border-slate-700 shadow-sm flex items-center justify-center shrink-0">
             <img src="assets/icon-facebook.png" alt="Facebook" class="w-5 h-5 object-contain">
           </span>
           <span>Facebook</span>
         </a>
       </div>
 
-      <div class="flex flex-col md:flex-row items-center justify-between gap-4 pt-6 border-t border-[#E8DEC8] dark:border-[#2D273D] text-center md:text-left">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 pt-6 border-t border-[#D6E3F6] dark:border-[#233652] text-center md:text-left">
         <div class="flex items-center justify-center md:justify-start gap-2.5">
           <img src="Logo.png" alt="MegaFulfilment Logo" class="w-7 h-7 rounded-lg object-contain bg-white p-0.5 shadow-sm shrink-0">
           <span data-i18n="footer_rights">© 2026 MegaFulfilment (megaff.uz) — Barça huquqlar himoyalangan.</span>
@@ -476,7 +476,7 @@
   </footer>
 
   <!-- Toast Notification -->
-  <div id="toast" class="hidden fixed bottom-6 right-6 z-50 bg-[#181623] text-white px-5 py-3.5 rounded-2xl shadow-2xl flex items-center gap-3 text-xs font-bold border border-[#B58A44]">
+  <div id="toast" class="hidden fixed bottom-6 right-6 z-50 bg-[#0B2345] text-white px-5 py-3.5 rounded-2xl shadow-2xl flex items-center gap-3 text-xs font-bold border border-[#2563EB]">
     <span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
       <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>

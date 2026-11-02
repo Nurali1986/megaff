@@ -391,9 +391,9 @@
       const active = btn.getAttribute('data-mode') === currentMode;
       btn.setAttribute('aria-pressed', active ? 'true' : 'false');
       if (active) {
-        btn.classList.add('bg-[#B58A44]', 'text-white', 'shadow-sm');
+        btn.classList.add('bg-[#2563EB]', 'text-white', 'shadow-sm');
       } else {
-        btn.classList.remove('bg-[#B58A44]', 'text-white', 'shadow-sm');
+        btn.classList.remove('bg-[#2563EB]', 'text-white', 'shadow-sm');
       }
     });
 
@@ -435,9 +435,9 @@
       const active = idx === ptTierIdx;
       btn.setAttribute('aria-pressed', active ? 'true' : 'false');
       if (active) {
-        btn.classList.add('bg-[#B58A44]', 'text-white', 'shadow-sm');
+        btn.classList.add('bg-[#2563EB]', 'text-white', 'shadow-sm');
       } else {
-        btn.classList.remove('bg-[#B58A44]', 'text-white', 'shadow-sm');
+        btn.classList.remove('bg-[#2563EB]', 'text-white', 'shadow-sm');
       }
     });
     renderPriceTable();
@@ -453,16 +453,16 @@
       return (
         '<div class="p-3 rounded-xl border transition ' +
         (isActive
-          ? 'border-[#B58A44] bg-[#F7EFE1] dark:bg-[#2B243B] shadow-sm'
-          : 'border-[#EBE3D5] dark:border-[#2D273D] bg-white/60 dark:bg-[#181522]/60 opacity-75') +
+          ? 'border-[#2563EB] bg-[#E6F0FE] dark:bg-[#1C3158] shadow-sm'
+          : 'border-[#DAE6F8] dark:border-[#233652] bg-white/60 dark:bg-[#0C1930]/60 opacity-75') +
         '">' +
         '<div class="flex items-center justify-between text-xs font-extrabold ' +
-        (isActive ? 'text-[#B58A44]' : 'text-[#181623] dark:text-white') +
+        (isActive ? 'text-[#2563EB]' : 'text-[#0B2345] dark:text-white') +
         '">' +
         '<span>' + c.id + dict.lc_cat_word + '</span>' +
-        (isActive ? '<span class="w-2 h-2 rounded-full bg-[#B58A44]"></span>' : '') +
+        (isActive ? '<span class="w-2 h-2 rounded-full bg-[#2563EB]"></span>' : '') +
         '</div>' +
-        '<div class="text-[11px] text-[#6E6A7C] dark:text-slate-400 font-semibold mt-0.5">' +
+        '<div class="text-[11px] text-[#5B6D8A] dark:text-slate-400 font-semibold mt-0.5">' +
         c.range +
         '</div>' +
         '</div>'
@@ -490,13 +490,13 @@
         '">' +
         '<input type="checkbox" ' +
         (checked ? 'checked' : '') +
-        ' onchange="toggleLcExtra(\'' + item.id + '\')" class="mt-1 w-5 h-5 rounded-md border-[#D5CBB8] accent-[#B58A44] shrink-0 cursor-pointer">' +
+        ' onchange="toggleLcExtra(\'' + item.id + '\')" class="mt-1 w-5 h-5 rounded-md border-[#C0D1EC] accent-[#2563EB] shrink-0 cursor-pointer">' +
         '<div class="flex-1 space-y-1">' +
         '<div class="flex items-center justify-between gap-2">' +
-        '<span class="text-xs sm:text-sm font-bold text-[#181623] dark:text-white">' + title + '</span>' +
+        '<span class="text-xs sm:text-sm font-bold text-[#0B2345] dark:text-white">' + title + '</span>' +
         '</div>' +
-        '<div class="text-[11px] text-[#6E6A7C] dark:text-slate-400 leading-snug">' + desc + '</div>' +
-        '<div class="text-xs font-extrabold text-[#B58A44] pt-0.5">+' + price.toLocaleString('ru-RU') + ' ' + cur + ' / ' + (dict.lc_pcs || 'dona') + '</div>' +
+        '<div class="text-[11px] text-[#5B6D8A] dark:text-slate-400 leading-snug">' + desc + '</div>' +
+        '<div class="text-xs font-extrabold text-[#2563EB] pt-0.5">+' + price.toLocaleString('ru-RU') + ' ' + cur + ' / ' + (dict.lc_pcs || 'dona') + '</div>' +
         '</div>' +
         '</label>'
       );
@@ -517,9 +517,9 @@
       const colCat = parseInt(th.getAttribute('data-cat-col'), 10) - 1;
       th.textContent = (colCat + 1) + dict.lc_cat_word + " (" + CAT_LIMITS[colCat].range + ")";
       if (colCat === currentCatIdx) {
-        th.classList.add('bg-[#B58A44]/20', 'text-[#B58A44]');
+        th.classList.add('bg-[#2563EB]/20', 'text-[#2563EB]');
       } else {
-        th.classList.remove('bg-[#B58A44]/20', 'text-[#B58A44]');
+        th.classList.remove('bg-[#2563EB]/20', 'text-[#2563EB]');
       }
     });
 
@@ -546,8 +546,8 @@
 
     tbody.innerHTML = rows.map(function (r) {
       return (
-        '<tr class="hover:bg-[#FAF6ED]/70 dark:hover:bg-[#231F30] transition">' +
-        '<td class="p-4 sm:p-5 font-bold text-[#181623] dark:text-white">' +
+        '<tr class="hover:bg-[#F2F7FF]/70 dark:hover:bg-[#152644] transition">' +
+        '<td class="p-4 sm:p-5 font-bold text-[#0B2345] dark:text-white">' +
         r.name +
         (r.isBase ? ' <span class="ml-1.5 text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 font-extrabold uppercase">Avto</span>' : '') +
         '</td>' +
@@ -556,8 +556,8 @@
           return (
             '<td class="p-4 sm:p-5 text-center font-extrabold ' +
             (isCurrentCat
-              ? 'bg-[#B58A44]/10 text-[#B58A44]'
-              : 'text-[#5A5668] dark:text-slate-300') +
+              ? 'bg-[#2563EB]/10 text-[#2563EB]'
+              : 'text-[#475A78] dark:text-slate-300') +
             '">' +
             v.toLocaleString('ru-RU') + ' ' + cur +
             '</td>'
@@ -624,9 +624,9 @@
     document.querySelectorAll('#lcChips .lc-chip').forEach(function (chip) {
       const chipQty = parseInt(chip.getAttribute('data-qty'), 10);
       if (chipQty === qty) {
-        chip.classList.add('border-[#B58A44]', 'bg-[#B58A44]', 'text-white');
+        chip.classList.add('border-[#2563EB]', 'bg-[#2563EB]', 'text-white');
       } else {
-        chip.classList.remove('border-[#B58A44]', 'bg-[#B58A44]', 'text-white');
+        chip.classList.remove('border-[#2563EB]', 'bg-[#2563EB]', 'text-white');
       }
     });
 

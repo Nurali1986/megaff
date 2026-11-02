@@ -396,13 +396,246 @@
     }
   };
 
-  // --- 7. INITIALIZE ON DOM READY ---
+  // --- 7. INTERACTIVE DOT BACKGROUND ---
+  function initDotField() {
+    const SPACING = 24;
+    const RADIUS = 170;
+    const PULL = 0.38;
+    const DOT_SIZE = 0.9;
+
+    const canvas = document.createElement('canvas');
+    canvas.className = 'dot-field';
+    canvas.setAttribute('aria-hidden', 'true');
+    document.body.prepend(canvas);
+    const ctx = canvas.getContext('2d');
+
+    const interactive = window.matchMedia('(hover: hover)').matches &&
+      !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const mouse = { x: 0, y: 0, smoothX: 0, smoothY: 0, strength: 0, targetStrength: 0 };
+    let width = 0;
+    let height = 0;
+    let dotColor = '';
+    let linkColor = '';
+    let frame = 0;
+
+    function readColors() {
+      const styles = getComputedStyle(document.documentElement);
+      dotColor = styles.getPropertyValue('--dot-color').trim();
+      linkColor = styles.getPropertyValue('--dot-link-color').trim();
+    }
+
+    function resize() {
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      width = window.innerWidth;
+      height = window.innerHeight;
+      canvas.width = Math.round(width * dpr);
+      canvas.height = Math.round(height * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, width, height);
+      // The grid scrolls with the page while the canvas itself stays fixed
+      const offsetY = -(window.scrollY % SPACING);
+      const cols = Math.ceil(width / SPACING) + 1;
+      const rows = Math.ceil(height / SPACING) + 2;
+      const reach = mouse.strength > 0.01 ? RADIUS : 0;
+      const near = new Map();
+
+      ctx.fillStyle = dotColor;
+      ctx.beginPath();
+      for (let row = 0; row < rows; row++) {
+        for (let col = 0; col < cols; col++) {
+          const x = col * SPACING + SPACING / 2;
+          const y = row * SPACING + SPACING / 2 + offsetY;
+          const dx = mouse.smoothX - x;
+          const dy = mouse.smoothY - y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < reach) {
+            const influence = 1 - dist / RADIUS;
+            const pull = influence * influence * mouse.strength * PULL;
+            near.set(row * cols + col, {
+              row: row,
+              col: col,
+              x: x + dx * pull,
+              y: y + dy * pull,
+              influence: influence * mouse.strength
+            });
+          } else {
+            ctx.moveTo(x + DOT_SIZE, y);
+            ctx.arc(x, y, DOT_SIZE, 0, Math.PI * 2);
+          }
+        }
+      }
+      ctx.fill();
+
+      if (near.size === 0) return;
+
+      // Join each dot to its right, lower and diagonal neighbours
+      ctx.strokeStyle = linkColor;
+      ctx.lineWidth = 0.8;
+      near.forEach(function (dot) {
+        [[0, 1], [1, 0], [1, 1], [1, -1]].forEach(function (step) {
+          const other = near.get((dot.row + step[0]) * cols + dot.col + step[1]);
+          if (!other || other.col !== dot.col + step[1]) return;
+          ctx.globalAlpha = Math.min(dot.influence, other.influence) * 0.6;
+          ctx.beginPath();
+          ctx.moveTo(dot.x, dot.y);
+          ctx.lineTo(other.x, other.y);
+          ctx.stroke();
+        });
+      });
+
+      ctx.fillStyle = linkColor;
+      near.forEach(function (dot) {
+        ctx.globalAlpha = 0.35 + dot.influence * 0.65;
+        ctx.beginPath();
+        ctx.arc(dot.x, dot.y, DOT_SIZE + dot.influence * 1.3, 0, Math.PI * 2);
+        ctx.fill();
+      });
+      ctx.globalAlpha = 1;
+    }
+
+    function tick() {
+      frame = 0;
+      mouse.smoothX += (mouse.x - mouse.smoothX) * 0.18;
+      mouse.smoothY += (mouse.y - mouse.smoothY) * 0.18;
+      mouse.strength += (mouse.targetStrength - mouse.strength) * 0.12;
+      draw();
+
+      const settled = Math.abs(mouse.x - mouse.smoothX) < 0.1 &&
+        Math.abs(mouse.y - mouse.smoothY) < 0.1 &&
+        Math.abs(mouse.targetStrength - mouse.strength) < 0.005;
+      if (settled) {
+        mouse.strength = mouse.targetStrength;
+      } else {
+        requestRedraw();
+      }
+    }
+
+    function requestRedraw() {
+      if (!frame) frame = requestAnimationFrame(tick);
+    }
+
+    readColors();
+    resize();
+    draw();
+
+    window.addEventListener('scroll', requestRedraw, { passive: true });
+    window.addEventListener('resize', function () {
+      resize();
+      requestRedraw();
+    }, { passive: true });
+
+    // Dark mode toggle changes the dot colors
+    new MutationObserver(function () {
+      readColors();
+      requestRedraw();
+    }).observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+
+    if (!interactive) return;
+
+    window.addEventListener('mousemove', function (e) {
+      if (mouse.strength < 0.01) {
+        mouse.smoothX = e.clientX;
+        mouse.smoothY = e.clientY;
+      }
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+      mouse.targetStrength = 1;
+      requestRedraw();
+    }, { passive: true });
+
+    document.documentElement.addEventListener('mouseleave', function () {
+      mouse.targetStrength = 0;
+      requestRedraw();
+    });
+  }
+
+  // --- 8. CARD ANIMATIONS ---
+  function initCardMotion() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const CARD_SELECTOR = '.floating-card, .tier-card';
+    const MAX_TILT = 6;
+
+    // Staggered entrance. Floating hero cards keep their own loop animation.
+    if ('IntersectionObserver' in window) {
+      const enterObs = new IntersectionObserver(function (entries) {
+        let order = 0;
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          const card = entry.target;
+          enterObs.unobserve(card);
+          card.style.setProperty('--card-order', order++);
+          card.classList.remove('card-pending');
+          card.classList.add('card-enter');
+          card.addEventListener('animationend', function done(e) {
+            if (e.target !== card) return;
+            card.classList.remove('card-enter');
+            card.removeEventListener('animationend', done);
+          });
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll(CARD_SELECTOR).forEach(function (card) {
+        if (card.classList.contains('animate-float')) return;
+        card.classList.add('card-pending');
+        enterObs.observe(card);
+      });
+    }
+
+    if (!window.matchMedia('(hover: hover)').matches) return;
+
+    // Cursor tilt and spotlight. Cards holding form fields stay flat so inputs don't move.
+    let activeCard = null;
+    let activeTilts = false;
+
+    function resetCard(card) {
+      card.style.removeProperty('--card-tilt-x');
+      card.style.removeProperty('--card-tilt-y');
+    }
+
+    document.addEventListener('mousemove', function (e) {
+      const card = e.target.closest ? e.target.closest(CARD_SELECTOR) : null;
+      if (card !== activeCard) {
+        if (activeCard) resetCard(activeCard);
+        activeCard = card;
+        activeTilts = !!card && !card.querySelector('input, select, textarea');
+      }
+      if (!card) return;
+
+      const rect = card.getBoundingClientRect();
+      const px = e.clientX - rect.left;
+      const py = e.clientY - rect.top;
+      card.style.setProperty('--card-glow-x', px + 'px');
+      card.style.setProperty('--card-glow-y', py + 'px');
+
+      if (activeTilts) {
+        // Wide cards like FAQ rows tilt less, or their edges swing too far
+        const tilt = MAX_TILT * Math.min(1, 380 / rect.width);
+        card.style.setProperty('--card-tilt-x', ((0.5 - py / rect.height) * tilt).toFixed(2) + 'deg');
+        card.style.setProperty('--card-tilt-y', ((px / rect.width - 0.5) * tilt).toFixed(2) + 'deg');
+      }
+    }, { passive: true });
+
+    document.documentElement.addEventListener('mouseleave', function () {
+      if (activeCard) resetCard(activeCard);
+      activeCard = null;
+    });
+  }
+
+  // --- 9. INITIALIZE ON DOM READY ---
   document.addEventListener('DOMContentLoaded', function () {
     // Apply saved language
     window.setLang(currentLang, true);
 
     // Initialize calculator
     window.calcMega();
+
+    initDotField();
+    initCardMotion();
 
     // Scroll reveal animation observer
     if ('IntersectionObserver' in window) {
