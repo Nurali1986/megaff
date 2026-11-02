@@ -549,7 +549,7 @@
         '<tr class="hover:bg-[#F2F7FF]/70 dark:hover:bg-[#152644] transition">' +
         '<td class="p-4 sm:p-5 font-bold text-[#0B2345] dark:text-white">' +
         r.name +
-        (r.isBase ? ' <span class="ml-1.5 text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 font-extrabold uppercase">Avto</span>' : '') +
+        (r.isBase ? ' <span class="ml-1.5 text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 font-extrabold uppercase">' + dict.lc_auto + '</span>' : '') +
         '</td>' +
         r.vals.map(function (v, cIdx) {
           const isCurrentCat = cIdx === currentCatIdx;

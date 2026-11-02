@@ -21,6 +21,7 @@
   };
 
   let currentLang = localStorage.getItem('mega_lang') || 'uz';
+  let selectedPhoneOption = null;
 
   // --- 1. TRANSLATION & DROPDOWN ENGINE ---
   window.toggleLangDropdown = function (event) {
@@ -46,6 +47,8 @@
       menu.classList.add('hidden');
       if (chevron) chevron.style.transform = 'rotate(0deg)';
     }
+    const phoneCountry = document.getElementById('phoneCountry');
+    if (phoneCountry && !phoneCountry.contains(e.target)) closePhoneCountryMenu();
   });
 
   window.setLang = function (lang, silent) {
@@ -86,6 +89,21 @@
       const key = el.getAttribute('data-i18n-placeholder');
       if (dict[key] !== undefined) {
         el.setAttribute('placeholder', dict[key]);
+      }
+    });
+
+    // Update image alt text and aria labels
+    document.querySelectorAll('[data-i18n-alt]').forEach(function (el) {
+      const key = el.getAttribute('data-i18n-alt');
+      if (dict[key] !== undefined) {
+        el.setAttribute('alt', dict[key]);
+      }
+    });
+
+    document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
+      const key = el.getAttribute('data-i18n-aria');
+      if (dict[key] !== undefined) {
+        el.setAttribute('aria-label', dict[key]);
       }
     });
 
@@ -309,7 +327,8 @@
     const countEl = document.getElementById('sum-items-count');
     const msgInput = document.getElementById('contact-msg');
     if (msgInput && totalEl && countEl) {
-      msgInput.value = "Kalkulyator bõyiça buyurtma: " + countEl.textContent + " | Taxminiy summa: " + totalEl.textContent;
+      const dict = (window.MEGA_I18N && window.MEGA_I18N[currentLang]) || window.MEGA_I18N.uz;
+      msgInput.value = dict.quote_order + ": " + countEl.textContent + " | " + dict.quote_sum + ": " + totalEl.textContent;
       if (typeof window.updateCharCount === 'function') window.updateCharCount();
     }
     const contactSec = document.getElementById('contact');
@@ -323,25 +342,75 @@
     if (msg && cnt) cnt.textContent = msg.value.length + " / 1000";
   };
 
+  function closePhoneCountryMenu() {
+    const menu = document.getElementById('phoneCountryMenu');
+    const chevron = document.getElementById('phoneCountryChevron');
+    if (menu) menu.classList.add('hidden');
+    if (chevron) chevron.style.transform = 'rotate(0deg)';
+  }
+
+  window.togglePhoneCountryMenu = function (event) {
+    if (event) event.stopPropagation();
+    const menu = document.getElementById('phoneCountryMenu');
+    const chevron = document.getElementById('phoneCountryChevron');
+    if (!menu) return;
+    const willOpen = menu.classList.contains('hidden');
+    menu.classList.toggle('hidden', !willOpen);
+    if (chevron) chevron.style.transform = willOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+  };
+
+  window.setPhoneCountry = function (code) {
+    const option = document.querySelector('[data-phone-country="' + code + '"]');
+    const input = document.getElementById('contact-phone');
+    if (!option || !input) return;
+    document.getElementById('phoneCountryFlag').innerHTML = option.querySelector('svg').innerHTML;
+    document.getElementById('phoneCountryDial').textContent = option.getAttribute('data-dial');
+    document.querySelectorAll('[data-phone-country]').forEach(function (btn) {
+      btn.classList.toggle('text-[#2563EB]', btn === option);
+    });
+    selectedPhoneOption = option;
+    input.placeholder = option.getAttribute('data-placeholder');
+    input.setCustomValidity('');
+    closePhoneCountryMenu();
+    input.focus();
+  };
+
+  // Accepts a number pasted together with its country code
+  function checkPhoneLength(input) {
+    const option = selectedPhoneOption || document.querySelector('[data-phone-country]');
+    const dial = option.getAttribute('data-dial').slice(1);
+    const expected = parseInt(option.getAttribute('data-digits'), 10);
+    let digits = input.value.replace(/\D/g, '');
+    if (digits.length === expected + dial.length && digits.indexOf(dial) === 0) {
+      digits = digits.slice(dial.length);
+    }
+    const dict = (window.MEGA_I18N && window.MEGA_I18N[currentLang]) || window.MEGA_I18N.uz;
+    input.setCustomValidity(digits.length === expected ? '' : dict.cnt_form_phone_err);
+    return '+' + dial + ' ' + digits;
+  }
+
   window.submitMegaLead = function (event, channel) {
     if (event) event.preventDefault();
     const form = document.getElementById('contact-form');
+    const phoneInput = document.getElementById('contact-phone');
+    const fullPhone = phoneInput ? checkPhoneLength(phoneInput) : "";
     if (form && typeof form.reportValidity === 'function' && !form.reportValidity()) {
       return;
     }
     const name = (document.getElementById('contact-name') || {}).value || "Seller";
-    const phone = (document.getElementById('contact-phone') || {}).value || "";
     const mp = (document.getElementById('contact-mp') || {}).value || "Uzum / WB / Yandex";
     const msg = (document.getElementById('contact-msg') || {}).value || "";
     const totalEl = document.getElementById('baraka-total');
     const calcSummary = totalEl ? totalEl.textContent : "";
 
+    const dict = (window.MEGA_I18N && window.MEGA_I18N[currentLang]) || window.MEGA_I18N.uz;
+
     const leadText =
       "Yangi Ariza — MegaFulfilment (megaff.uz)\n" +
       "Ism / Dõkon: " + name + "\n" +
-      "Telefon: +998 " + phone + "\n" +
+      "Telefon: " + fullPhone + "\n" +
       "Marketpleys: " + mp + "\n" +
-      (calcSummary && calcSummary !== "0 sõm" ? "Kalkulyator hisobi: " + calcSummary + "\n" : "") +
+      (calcSummary && !/^0\D/.test(calcSummary) ? "Kalkulyator hisobi: " + calcSummary + "\n" : "") +
       "Xabar: " + msg;
 
     // Copy to clipboard so user can paste immediately in Telegram if needed
@@ -352,15 +421,15 @@
     if (channel === 'whatsapp') {
       const waUrl = "https://wa.me/" + window.MEGA_CONFIG.whatsapp + "?text=" + encodeURIComponent(leadText);
       window.open(waUrl, '_blank');
-      window.showToast("Ariza WhatsApp (+998 95 980 88 17) orqali yõnaltirildi!");
+      window.showToast(dict.toast_whatsapp);
     } else if (channel === 'vip') {
       window.open(window.MEGA_CONFIG.telegramLeadGroup, '_blank');
-      window.showToast("Arizangiz nusxalandi! Yopiq Telegram guruhga qõşiling.");
+      window.showToast(dict.toast_vip);
     } else {
       // Default: Telegram @megaffuz with pre-filled text
       const tgUrl = "https://t.me/" + window.MEGA_CONFIG.telegramUser + "?text=" + encodeURIComponent(leadText);
       window.open(tgUrl, '_blank');
-      window.showToast("Ariza @megaffuz Telegram'ga yõnaltirildi!");
+      window.showToast(dict.toast_telegram);
     }
   };
 
