@@ -122,3 +122,150 @@ body {
   animation: floatSlow 4s ease-in-out infinite;
 }
 
+/* ==========================================================================
+   Left Fixed Side Dot Navigation (Baraka 1:1 Stepper)
+   ========================================================================== */
+.side-dot-nav {
+  position: fixed;
+  left: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 45;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  user-select: none;
+}
+
+@media (min-width: 1280px) {
+  .side-dot-nav {
+    display: flex;
+  }
+}
+
+.side-dot-track {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Continuous vertical line passing through the center of the 16px dots (left: 7.25px) */
+.side-dot-track::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 7.25px;
+  width: 1.5px;
+  background-color: #B9B2A6;
+  z-index: 0;
+}
+
+.dark .side-dot-track::before {
+  background-color: #3A344C;
+}
+
+.side-dot-item {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.side-dot-circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 9999px;
+  background-color: #FAF6ED;
+  border: 1.75px solid #969086;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+}
+
+.dark .side-dot-circle {
+  background-color: #110F18;
+  border-color: #635C78;
+}
+
+.side-dot-item:hover .side-dot-circle {
+  border-color: #E03A2E;
+  transform: scale(1.1);
+}
+
+.side-dot-item.active .side-dot-circle {
+  background-color: #E03A2E;
+  border: 2.5px solid #FFFFFF;
+  box-shadow:
+    0 0 0 4px rgba(224, 58, 46, 0.20),
+    0 0 0 9px rgba(224, 58, 46, 0.09);
+  transform: scale(1.12);
+}
+
+.dark .side-dot-item.active .side-dot-circle {
+  border-color: #181623;
+  box-shadow:
+    0 0 0 4px rgba(224, 58, 46, 0.28),
+    0 0 0 9px rgba(224, 58, 46, 0.12);
+}
+
+.side-dot-label {
+  margin-left: 12px;
+  padding: 5px 14px;
+  border-radius: 9999px;
+  background-color: #181413;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  opacity: 0;
+  transform: translateX(-6px);
+  pointer-events: none;
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.dark .side-dot-label {
+  background-color: #262135;
+  border: 1px solid #3B3352;
+}
+
+.side-dot-item.active .side-dot-label,
+.side-dot-item:hover .side-dot-label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Tier Card Checkbox Custom Look */
+.tier-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border: 1px solid #EBE3D5;
+  border-radius: 18px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark .tier-card {
+  background: rgba(27, 24, 38, 0.92);
+  border-color: #2D273D;
+}
+
+.tier-card:hover {
+  border-color: #C59B27;
+}
+
+.tier-card.tier-active {
+  border-color: #B58A44;
+  background: #FFFCF6;
+  box-shadow: 0 10px 25px -5px rgba(181, 138, 68, 0.15);
+}
+
+.dark .tier-card.tier-active {
+  border-color: #DFB743;
+  background: #211D30;
+}
+
+

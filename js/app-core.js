@@ -115,19 +115,72 @@
   };
 
   // --- 2. CALCULATOR ENGINE ---
+  window.toggleTierCard = function (tier) {
+    const chk = document.getElementById('tier-chk-' + tier);
+    const box = document.getElementById('tier-box-' + tier);
+    const card = document.getElementById('tier-card-' + tier);
+    const input = document.getElementById('tier-qty-' + tier);
+    if (!chk || !input) return;
+
+    if (chk.checked) {
+      if (box) box.classList.remove('hidden');
+      if (card) card.classList.add('tier-active');
+      if ((parseInt(input.value, 10) || 0) === 0) {
+        input.value = tier === 't6' ? 5 : 100;
+      }
+    } else {
+      if (box) box.classList.add('hidden');
+      if (card) card.classList.remove('tier-active');
+      input.value = 0;
+    }
+
+    // Show/hide optional add-ons panel if any tier is checked
+    const anyChecked = ['t1', 't2', 't3', 't4', 't5', 't6'].some(function (k) {
+      const c = document.getElementById('tier-chk-' + k);
+      return c && c.checked;
+    });
+    const addonsPanel = document.getElementById('calc-addons-panel');
+    if (addonsPanel) {
+      if (anyChecked) addonsPanel.classList.remove('hidden');
+      else addonsPanel.classList.add('hidden');
+    }
+
+    window.calcMega();
+  };
+
   window.changeTierQty = function (tier, delta) {
     const input = document.getElementById('tier-qty-' + tier);
+    const chk = document.getElementById('tier-chk-' + tier);
+    const box = document.getElementById('tier-box-' + tier);
+    const card = document.getElementById('tier-card-' + tier);
     if (!input) return;
     let val = parseInt(input.value, 10) || 0;
     val = Math.max(0, val + delta);
     input.value = val;
+    if (chk) {
+      chk.checked = val > 0;
+      if (val > 0) {
+        if (box) box.classList.remove('hidden');
+        if (card) card.classList.add('tier-active');
+      } else {
+        if (box) box.classList.add('hidden');
+        if (card) card.classList.remove('tier-active');
+      }
+    }
     window.calcMega();
   };
 
   window.setPresetQty = function (tier, qty) {
     ['t1', 't2', 't3', 't4', 't5', 't6'].forEach(function (k) {
       const inp = document.getElementById('tier-qty-' + k);
-      if (inp) inp.value = (k === tier ? qty : 0);
+      const chk = document.getElementById('tier-chk-' + k);
+      const box = document.getElementById('tier-box-' + k);
+      const card = document.getElementById('tier-card-' + k);
+      const active = k === tier && qty > 0;
+      if (inp) inp.value = active ? qty : 0;
+      if (chk) chk.checked = active;
+      if (box) box.classList.toggle('hidden', !active);
+      if (card) card.classList.toggle('tier-active', active);
     });
     window.calcMega();
   };
@@ -369,6 +422,46 @@
       document.querySelectorAll('.reveal-up').forEach(function (el) {
         el.classList.add('revealed');
       });
+    }
+
+    // Left Fixed Side Dot Navigation Scroll Spy (Baraka 1:1)
+    const dotLinks = Array.from(document.querySelectorAll('[data-section-dot]'));
+    if (dotLinks.length > 0) {
+      const sectionIds = dotLinks.map(function (a) {
+        return a.getAttribute('data-section-dot');
+      });
+
+      const updateActiveSideDot = function () {
+        const triggerLine = window.innerHeight * 0.38;
+        let activeId = sectionIds[0];
+
+        for (let i = 0; i < sectionIds.length; i++) {
+          const sec = document.getElementById(sectionIds[i]);
+          if (!sec) continue;
+          const rect = sec.getBoundingClientRect();
+          if (rect.top <= triggerLine) {
+            activeId = sectionIds[i];
+          }
+        }
+
+        // If scrolled to the very bottom of the page, highlight last section
+        if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 40)) {
+          activeId = sectionIds[sectionIds.length - 1];
+        }
+
+        dotLinks.forEach(function (link) {
+          const id = link.getAttribute('data-section-dot');
+          if (id === activeId) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+      };
+
+      window.addEventListener('scroll', updateActiveSideDot, { passive: true });
+      window.addEventListener('resize', updateActiveSideDot, { passive: true });
+      updateActiveSideDot();
     }
   });
 })();

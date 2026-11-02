@@ -24,10 +24,7 @@ window.MEGA_I18N = {
   // ==========================================================================
   uz: {
     // Switcher & Common
-    sw_label: "Dizayn variantlari:",
-    sw_v1: "1-Variant (Baraka 1:1)",
-    sw_v2: "2-Variant (Logistique 360)",
-    sw_v3: "3-Variant (Unikal PRO Taklif)",
+   
     currency: "sõm",
     unit_pcs: "dona",
     unit_days: "kun",
@@ -77,31 +74,28 @@ window.MEGA_I18N = {
     pillar3_desc: "Uzum (Xonobod), Wildberries, Yandex Market va Ozon omborlariga har kuni maxsus transport reyslari.",
     pillar4_title: "100% Sifat va moddiy kafolat",
     pillar4_desc: "Şartnoma asosida har bir dona tovar butligi va marketpleysda qabul qilinişiga tõliq javobgarlik.",
-  
+    img1_badge: "QADOQLAŞ VA MARKIROVKA",
+    img1_caption: "Marketpleys standartlari bõyiça 58×40 mm termo-etiketka va sifat nazorati",
+    img2_badge: "A-KLASS OMBOR MAJMUASI",
+    img2_caption: "Tashkent Index hududidagi zamonaviy MegaFulfilment saralaş va saqlaş markazi",
 
     // Services Section
     srv_badge: "BIZNING XIZMATLAR",
     srv_title_1: "Hammasi",
     srv_title_2: "bir joyda — kalitgaça",
     srv_desc: "Asosiy fulfillment xizmati va qõşimça qadoqlaş imkoniyatlari. Tovaringiz xususiyatidan kelib çiqib eng optimal yeçimni taqdim etamiz.",
-    srv1_title: "Saqlaş (Saqlaş)",
+    srv1_title: "Saqlaş",
     srv1_desc: "Tovarlaringiz maxsus stellajlarda xavfsiz saqlanadi. Hamkorlarimiz uçun dastlabki 45 kun — mutlaqo BEPUL!",
     srv1_price: "0 sõm / 45 kun",
-    srv2_title: "Professional Qadoqlaş",
+    srv2_title: "Professional qadoqlaş",
     srv2_desc: "Zip-lock va BOPP paketlar, pufakçali plyonka (pupirka), termosadkali plyonka, kurerlik paketi va 3/5 qavatli korobkalar.",
     srv2_price: "600 sõmdan / dona",
-    srv3_title: "Etiketkalaş va Ştrix-kod",
+    srv3_title: "Etiketkalaş",
     srv3_desc: "Marketpleys reglamenti bõyiça 58x40 mm termo-etiketka, EAC belgilari va Çestniy Znak (ASL Belgisi) markirovkasi.",
     srv3_price: "Içida (bepul)",
-    srv4_title: "Marketpleysga Yetkaziş",
+    srv4_title: "Marketpleysga yetkaziş",
     srv4_desc: "Tayyor partiyalarni korobka yoki palletda Uzum, Wildberries, Yandex va Ozon omborlariga rasmiy hujjat bilan topşiriş.",
-    srv4_price: "Muntazam reyslar",
-    srv5_title: "Brakni tekşiriş va Saralaş",
-    srv5_desc: "Xitoydan yoki işlab çiqaruvçidan kelgan tovarlarni 100% vizual tekşiriş, tõplamlaş (komplektatsiya) va qayta õraş.",
-    srv5_price: "Kafolatlangan",
-    srv6_title: "Foto/Video va Infografika",
-    srv6_desc: "Mahsulot kartoçkasi CTR va konversiyasini 3 barobargaça oşiruvçi professional studiya syomkasi va sotuvçi dizayn.",
-    srv6_price: "Bonus / Maxsus narx",
+    
 
     // Calculator Section
     calc_badge: "NARXLAR KALKULYATORI",
@@ -157,10 +151,10 @@ window.MEGA_I18N = {
     st_pill4: "✓ 24/7 Video-hisobot",
     bot_title: "MegaBOT — Avtomatlaşgan Ombor Hisoboti",
     bot_sub: "Telegram Bot (@megaffuz · 24/7 faol)",
-    bot_msg1_title: "📦 Yangi partiya qadoqlandi va jõnatildi:",
+    bot_msg1_title: "Yangi partiya qadoqlandi va jõnatildi:",
     bot_msg1_body: "Uzum Market (Xonobod FBO) omboriga 450 dona mahsulot qadoqlanib, ştrix-kodlandi va topşirildi.",
-    bot_msg1_meta: "Bugun 14:20 · Status: Marketpleys qabul qildi ✅",
-    bot_msg2_title: "⏳ Bepul Saqlaş nazorati:",
+    bot_msg1_meta: "Bugun 14:20 · Status: Marketpleys qabul qildi",
+    bot_msg2_title: "Bepul Saqlaş nazorati:",
     bot_msg2_body: "Ombordagi 1 200 dona zaxira tovaringiz uçun bepul 45 kunlik muddatdan yana 39 kun qoldi (Tõlov: 0 sõm).",
     sheet_title: "Google Sheets — Jonli Ombor Qoldiği",
     sheet_badge: "Avto-sinxronizatsiya",
@@ -204,12 +198,12 @@ window.MEGA_I18N = {
     v2_urg_btn: "Ekspress buyurtma beriş",
 
     // Variant 3 Specific (Ultra Commercial Proposal / B2B Conversion)
-    v3_offer_badge: "🔥 UNIKAL TIJORAT TAKLIFI · MEGAFULFILMENT (MEGAFF.UZ)",
+    v3_offer_badge: "UNIKAL TIJORAT TAKLIFI · MEGAFULFILMENT (MEGAFF.UZ)",
     v3_hero_title: "Siz faqat sotuv bilan şuğullaning — Ombor va Logistikani 100% bizga topşiring!",
     v3_hero_sub: "Õz omboringizni ijaraga oliş, işçilar yollaş va qadoqlaşda xato qilib jarima tõlaşni tõxtating. Tashkent Index markazidagi MegaFulfilment bilan xarajatlaringizni 45% ga kamaytiring va savdoni 3x oşiring!",
-    v3_usp1: "🎁 45 KUN BEPUL SAQLAŞ",
-    v3_usp2: "⚡ 24 SOATDA FBO/FBS JÕNATMA",
-    v3_usp3: "🛡️ 100% MODDIY JAVOBGARLIK",
+    v3_usp1: "45 KUN BEPUL SAQLAŞ",
+    v3_usp2: "24 SOATDA FBO/FBS JÕNATMA",
+    v3_usp3: "100% MODDIY JAVOBGARLIK",
     v3_usp4: "🇨🇳 XITOYDAN TÕĞRIDAN-TÕĞRI QABUL",
     v3_cmp_badge: "FOYDA VA TEJAMKORLIK TAQQOSLAŞI",
     v3_cmp_title: "Õz omboringizni uşlaş vs MegaFulfilment",
@@ -292,8 +286,7 @@ window.MEGA_I18N = {
     cnt_form_msg_ph: "Masalan: Kiyim-keçak, 500 dona, Uzum FBO uçun qadoqlaş kerak...",
     cnt_btn_tg: "Telegram orqali ",
     cnt_btn_wa: "WhatsApp orqali ",
-    cnt_btn_vip: "Leadlar uçun Yopiq Telegram Guruhga kiriş",
-    footer_rights: "© 2026 MegaFulfilment (megaff.uz) — Barça huquqlar himoyalangan."
+    footer_rights: "© 2026 MegaFulfilment — Barça huquqlar himoyalangan."
   },
 
   // ==========================================================================
@@ -350,8 +343,10 @@ window.MEGA_I18N = {
     pillar3_desc: "Ежедневная отправка партий в коробах и на паллетах на склады Uzum, Wildberries, Yandex и Ozon.",
     pillar4_title: "100% Гарантия качества",
     pillar4_desc: "Полная материальная ответственность по договору за каждую единицу товара и правильность маркировки.",
-    img1_caption: "rasm1 — Современный складской комплекс MegaFulfilment в Tashkent Index",
-    img2_caption: "rasm2 — Линия профессиональной упаковки, термомаркировки и контроля качества",
+    img1_badge: "УПАКОВКА И МАРКИРОВКА",
+    img1_caption: "Линия профессиональной упаковки, термомаркировки 58×40 мм и контроля качества",
+    img2_badge: "СКЛАДСКОЙ КОМПЛЕКС КЛАССА А",
+    img2_caption: "Современный фулфилмент-центр MegaFulfilment в комплексе Tashkent Index",
 
     srv_badge: "НАШИ УСЛУГИ",
     srv_title_1: "Все процессы",
@@ -428,10 +423,10 @@ window.MEGA_I18N = {
     st_pill4: "✓ Видеофиксация упаковки 24/7",
     bot_title: "MegaBOT — Автоматический складской учет",
     bot_sub: "Telegram-бот (@megaffuz · активен 24/7)",
-    bot_msg1_title: "📦 Партия упакована и отгружена:",
+    bot_msg1_title: "Партия упакована и отгружена:",
     bot_msg1_body: "Для Uzum Market (FBO Ханабад) упаковано, промаркировано и сдано 450 шт. товара.",
-    bot_msg1_meta: "Сегодня 14:20 · Статус: Принято складом ✅",
-    bot_msg2_title: "⏳ Срок бесплатного хранения:",
+    bot_msg1_meta: "Сегодня 14:20 · Статус: Принято складом",
+    bot_msg2_title: "Срок бесплатного хранения:",
     bot_msg2_body: "По партии из 1 200 шт. осталось 39 из 45 дней бесплатного хранения (Начислено: 0 сум).",
     sheet_title: "Google Sheets — Живая таблица остатков",
     sheet_badge: "Авто-обновление",
@@ -473,12 +468,12 @@ window.MEGA_I18N = {
     v2_urg_desc: "Нужна срочная отгрузка под распродажу? Мы работаем 24/7 и подготовим вашу партию за считанные часы!",
     v2_urg_btn: "Заказать экспресс-отгрузку",
 
-    v3_offer_badge: "🔥 УНИКАЛЬНОЕ КОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ · MEGAFF.UZ",
+    v3_offer_badge: "УНИКАЛЬНОЕ КОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ · MEGAFF.UZ",
     v3_hero_title: "Занимайтесь только продажами — Склад, Упаковку и Логистику мы берем на себя!",
     v3_hero_sub: "Перестаньте переплачивать за аренду склада, штат упаковщиков и штрафы маркетплейсов. Сократите логистические расходы на 45% и увеличьте оборот в 3 раза с MegaFulfilment в Tashkent Index!",
-    v3_usp1: "🎁 45 ДНЕЙ БЕСПЛАТНОЕ ХРАНЕНИЕ",
-    v3_usp2: "⚡ ОТГРУЗКА FBO/FBS ЗА 24 ЧАСА",
-    v3_usp3: "🛡️ 100% МАТЕРИАЛЬНАЯ ОТВЕТСТВЕННОСТЬ",
+    v3_usp1: "45 ДНЕЙ БЕСПЛАТНОЕ ХРАНЕНИЕ",
+    v3_usp2: "ОТГРУЗКА FBO/FBS ЗА 24 ЧАСА",
+    v3_usp3: "100% МАТЕРИАЛЬНАЯ ОТВЕТСТВЕННОСТЬ",
     v3_usp4: "🇨🇳 ПРЯМАЯ ПРИЕМКА КАРГО ИЗ КИТАЯ",
     v3_cmp_badge: "СРАВНЕНИЕ ВЫГОДЫ И РЕНТАБЕЛЬНОСТИ",
     v3_cmp_title: "Свой склад vs Аутсорсинг в MegaFulfilment",
@@ -560,7 +555,7 @@ window.MEGA_I18N = {
     cnt_btn_tg: "Telegram ",
     cnt_btn_wa: "WhatsApp",
     cnt_btn_vip: "Вступить в закрытую Telegram-группу для лидов",
-    footer_rights: "© 2026 MegaFulfilment (megaff.uz) — Все права защищены."
+    footer_rights: "© 2026 MegaFulfilment — Все права защищены."
   },
 
   // ==========================================================================
@@ -617,8 +612,10 @@ window.MEGA_I18N = {
     pillar3_desc: "Regular box and pallet shipments to Uzum Market, Wildberries, Yandex Market, and Ozon.",
     pillar4_title: "100% Financial Liability",
     pillar4_desc: "Contract-backed guarantee for inventory accuracy, zero barcode rejection, and cargo safety.",
-    img1_caption: "rasm1 — MegaFulfilment Smart Warehouse at Tashkent Index",
-    img2_caption: "rasm2 — Precision Packaging, Barcode Labeling & QC Station",
+    img1_badge: "PACKAGING & LABELING",
+    img1_caption: "Precision 58×40 mm barcode labeling, packaging & quality control station",
+    img2_badge: "CLASS-A WAREHOUSE HUB",
+    img2_caption: "MegaFulfilment smart sorting & fulfillment center at Tashkent Index",
 
     srv_badge: "OUR SERVICES",
     srv_title_1: "Everything",
@@ -695,10 +692,10 @@ window.MEGA_I18N = {
     st_pill4: "✓ 24/7 CCTV video verification",
     bot_title: "MegaBOT — Automated Warehouse Assistant",
     bot_sub: "Telegram Bot (@megaffuz · Active 24/7)",
-    bot_msg1_title: "📦 Batch Packed & Dispatched:",
+    bot_msg1_title: "Batch Packed & Dispatched:",
     bot_msg1_body: "450 units packed, barcoded, and delivered to Uzum Market FBO Hub (Khanabad).",
-    bot_msg1_meta: "Today 14:20 · Status: Accepted by Marketplace ✅",
-    bot_msg2_title: "⏳ Free Storage Tracker:",
+    bot_msg1_meta: "Today 14:20 · Status: Accepted by Marketplace",
+    bot_msg2_title: "Free Storage Tracker:",
     bot_msg2_body: "39 of 45 free storage days remaining for your 1,200 reserve units (Fee: 0 UZS).",
     sheet_title: "Google Sheets — Live Inventory Ledger",
     sheet_badge: "Auto-Synced",
@@ -740,12 +737,12 @@ window.MEGA_I18N = {
     v2_urg_desc: "Need same-day dispatch for a flash sale? Our team operates 24/7 to pack and deliver your stock on priority!",
     v2_urg_btn: "Request Express Dispatch",
 
-    v3_offer_badge: "🔥 EXCLUSIVE B2B COMMERCIAL PROPOSAL · MEGAFF.UZ",
+    v3_offer_badge: "EXCLUSIVE B2B COMMERCIAL PROPOSAL · MEGAFF.UZ",
     v3_hero_title: "You Focus on Sales — We Handle 100% of Your Warehouse, Packaging & Logistics!",
     v3_hero_sub: "Stop paying for warehouse rent, full-time packers, and marketplace penalty fines. Cut your logistics overhead by 45% and scale 3x faster with MegaFulfilment at Tashkent Index!",
-    v3_usp1: "🎁 45 DAYS FREE STORAGE",
-    v3_usp2: "⚡ 24H FBO/FBS DISPATCH",
-    v3_usp3: "🛡️ 100% FINANCIAL LIABILITY",
+    v3_usp1: "45 DAYS FREE STORAGE",
+    v3_usp2: "24H FBO/FBS DISPATCH",
+    v3_usp3: "100% FINANCIAL LIABILITY",
     v3_usp4: "🇨🇳 DIRECT CHINA CARGO RECEIVING",
     v3_cmp_badge: "ROI & COST COMPARISON",
     v3_cmp_title: "In-House Warehouse vs. MegaFulfilment",
@@ -827,7 +824,7 @@ window.MEGA_I18N = {
     cnt_btn_tg: "Telegram",
     cnt_btn_wa: "WhatsApp",
     cnt_btn_vip: "Join Closed VIP Telegram Group for Leads",
-    footer_rights: "© 2026 MegaFulfilment (megaff.uz) — All rights reserved."
+    footer_rights: "© 2026 MegaFulfilment — All rights reserved."
   },
 
   // ==========================================================================
@@ -884,8 +881,10 @@ window.MEGA_I18N = {
     pillar3_desc: "每日发车送往 Uzum (Khanabad仓)、Wildberries、Yandex Market 及 Ozon 仓库。",
     pillar4_title: "100% 货物安全与赔偿保障",
     pillar4_desc: "签署正规商业合同，对库内丢件、破损及贴标错误承担100%全额物质赔偿责任。",
-    img1_caption: "rasm1 — 位于塔什干 Tashkent Index 的 MegaFulfilment 现代化海外仓",
-    img2_caption: "rasm2 — 标准化流水线打包、热敏条码打印与质检工作台",
+    img1_badge: "专业贴标与包装工作台",
+    img1_caption: "标准化流水线打包、58×40mm 热敏条码打印与质检工作台",
+    img2_badge: "A级现代化海外仓",
+    img2_caption: "位于塔什干 Tashkent Index 的 MegaFulfilment 智能分拣与仓储中心",
 
     srv_badge: "全方位服务体系",
     srv_title_1: "所有供应链环节",
@@ -962,10 +961,10 @@ window.MEGA_I18N = {
     st_pill4: "✓ 24/7 全程监控视频备查",
     bot_title: "MegaBOT — 智能海外仓播报助手",
     bot_sub: "Telegram 官方机器人 (@megaffuz · 24/7 在线)",
-    bot_msg1_title: "📦 批次打包与送仓完成通知：",
+    bot_msg1_title: "批次打包与送仓完成通知：",
     bot_msg1_body: "发往 Uzum Market (FBO Khanabad总仓) 的 450 件商品已完成贴标装箱并顺利签收。",
-    bot_msg1_meta: "今日 14:20 · 状态：平台仓已成功上架 ✅",
-    bot_msg2_title: "⏳ 免费仓储期提醒：",
+    bot_msg1_meta: "今日 14:20 · 状态：平台仓已成功上架",
+    bot_msg2_title: "免费仓储期提醒：",
     bot_msg2_body: "您在库 1,200 件备货商品的45天免费存储期还剩 39 天（当前仓储费：0 苏姆）。",
     sheet_title: "Google Sheets — 实时云端库存总账",
     sheet_badge: "毫秒级同步",
@@ -1007,12 +1006,12 @@ window.MEGA_I18N = {
     v2_urg_desc: "大促爆单急需补货？我们提供7×24小时不间断加急打包与当日专车送仓服务！",
     v2_urg_btn: "立即预约加急送仓",
 
-    v3_offer_badge: "🔥 独家高转化商业提案 · MEGAFULFILMENT (MEGAFF.UZ)",
+    v3_offer_badge: "独家高转化商业提案 · MEGAFULFILMENT (MEGAFF.UZ)",
     v3_hero_title: "您只需专注店铺爆单 —— 仓储、质检、打包与送仓 100% 交给我们！",
     v3_hero_sub: "告别高昂的自建仓租金、繁琐的工人管理与平台拒收罚款。入驻塔什干 Tashkent Index 核心云仓 MegaFulfilment，立省 45% 物流成本，助您销量翻 3 倍！",
-    v3_usp1: "🎁 首 45 天免费仓储",
-    v3_usp2: "⚡ 24 小时极速发往平台仓",
-    v3_usp3: "🛡️ 100% 丢损包赔合同保障",
+    v3_usp1: "首 45 天免费仓储",
+    v3_usp2: "24 小时极速发往平台仓",
+    v3_usp3: "100% 丢损包赔合同保障",
     v3_usp4: "🇨🇳 中国卡航/1688货源直达卸货",
     v3_cmp_badge: "成本与投资回报率 (ROI) 深度对比",
     v3_cmp_title: "自租仓库雇人打包 vs 托管给 MegaFulfilment",
@@ -1094,6 +1093,6 @@ window.MEGA_I18N = {
     cnt_btn_tg: "Telegram ",
     cnt_btn_wa: "WhatsApp ",
     cnt_btn_vip: "加入潜在客户与卖家 VIP Telegram 内部群",
-    footer_rights: "© 2026 MegaFulfilment (megaff.uz) — 版权所有."
+    footer_rights: "© 2026 MegaFulfilment — 版权所有."
   }
 };
