@@ -1,0 +1,22 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 340" fill="none">
+  <rect width="420" height="340" rx="24" fill="#FFFFFF"/>
+  <ellipse cx="220" cy="265" rx="140" ry="42" fill="#E5EFFC"/>
+  <!-- Pallet & Stacked Boxes -->
+  <polygon points="160,235 250,185 350,235 260,285" fill="#C48B45" stroke="#0A2540" stroke-width="2.2"/>
+  <!-- Box 1 -->
+  <polygon points="180,165 245,130 310,165 245,200" fill="#F5CFA0" stroke="#0A2540" stroke-width="2.2"/>
+  <polygon points="180,165 245,200 245,260 180,225" fill="#DFAA68" stroke="#0A2540" stroke-width="2.2"/>
+  <polygon points="245,200 310,165 310,225 245,260" fill="#C68D47" stroke="#0A2540" stroke-width="2.2"/>
+  <!-- Box 2 Top -->
+  <polygon points="200,115 245,90 290,115 245,140" fill="#F8DCB8" stroke="#0A2540" stroke-width="2.2"/>
+  <polygon points="200,115 245,140 245,180 200,155" fill="#E5B475" stroke="#0A2540" stroke-width="2.2"/>
+  <polygon points="245,140 290,115 290,155 245,180" fill="#CC9552" stroke="#0A2540" stroke-width="2.2"/>
+  <!-- Worker Figure in Blue Uniform -->
+  <circle cx="115" cy="115" r="18" fill="#F4C29F" stroke="#0A2540" stroke-width="2"/>
+  <path d="M95,110 C95,95 135,95 138,112 Z" fill="#1D63DC" stroke="#0A2540" stroke-width="2"/>
+  <rect x="96" y="136" width="38" height="62" rx="12" fill="#1D63DC" stroke="#0A2540" stroke-width="2"/>
+  <line x1="106" y1="198" x2="102" y2="255" stroke="#0A2540" stroke-width="10" stroke-linecap="round"/>
+  <line x1="124" y1="198" x2="128" y2="255" stroke="#0A2540" stroke-width="10" stroke-linecap="round"/>
+  <line x1="134" y1="155" x2="175" y2="195" stroke="#1D63DC" stroke-width="9" stroke-linecap="round"/>
+  <text x="210" y="320" text-anchor="middle" fill="#0A2540" font-family="sans-serif" font-size="12" font-weight="bold">rasm8 · Ombor Xodimi va Rohlya</text>
+</svg>

@@ -1,0 +1,33 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 280" fill="none">
+  <rect width="640" height="280" rx="22" fill="#DCEBFA"/>
+  <!-- Isometric Route Map Grid -->
+  <polygon points="160,210 380,110 600,190 380,275" fill="#EAF3FE" stroke="#99C1F1" stroke-width="2"/>
+  <path d="M230,205 L360,155 L490,200" stroke="#1D63DC" stroke-width="3.5" stroke-dasharray="7 5"/>
+  <!-- Location Pins -->
+  <circle cx="230" cy="195" r="12" fill="#1D63DC"/>
+  <circle cx="230" cy="195" r="5" fill="#FFFFFF"/>
+  <circle cx="515" cy="190" r="14" fill="#1D63DC"/>
+  <circle cx="515" cy="190" r="6" fill="#FFFFFF"/>
+  <!-- Express Blue Truck -->
+  <g transform="translate(310, 85)">
+    <polygon points="40,45 135,0 180,25 85,70" fill="#1D63DC" stroke="#0A2540" stroke-width="2.2"/>
+    <polygon points="85,70 180,25 180,85 85,130" fill="#1245A3" stroke="#0A2540" stroke-width="2.2"/>
+    <polygon points="40,45 85,70 85,130 40,105" fill="#D2E5FC" stroke="#0A2540" stroke-width="2.2"/>
+    <polygon points="5,85 40,68 40,105 5,122" fill="#FFFFFF" stroke="#0A2540" stroke-width="2"/>
+    <circle cx="35" cy="120" r="11" fill="#0A2540"/>
+    <circle cx="105" cy="120" r="11" fill="#0A2540"/>
+    <circle cx="155" cy="95" r="11" fill="#0A2540"/>
+  </g>
+  <!-- Delivery Drone with Box -->
+  <g transform="translate(80, 35)">
+    <ellipse cx="40" cy="25" rx="24" ry="8" fill="#92B8EC" stroke="#0A2540" stroke-width="1.8"/>
+    <ellipse cx="130" cy="25" rx="24" ry="8" fill="#92B8EC" stroke="#0A2540" stroke-width="1.8"/>
+    <ellipse cx="60" cy="55" rx="24" ry="8" fill="#92B8EC" stroke="#0A2540" stroke-width="1.8"/>
+    <ellipse cx="110" cy="55" rx="24" ry="8" fill="#92B8EC" stroke="#0A2540" stroke-width="1.8"/>
+    <line x1="40" y1="25" x2="110" y2="55" stroke="#0A2540" stroke-width="3"/>
+    <line x1="130" y1="25" x2="60" y2="55" stroke="#0A2540" stroke-width="3"/>
+    <rect x="65" y="30" width="40" height="20" rx="8" fill="#1D63DC" stroke="#0A2540" stroke-width="2"/>
+    <rect x="70" y="55" width="30" height="28" rx="4" fill="#F3C78B" stroke="#0A2540" stroke-width="2"/>
+  </g>
+  <text x="530" y="260" text-anchor="middle" fill="#0A2540" font-family="sans-serif" font-size="11" font-weight="bold">rasm9 · Express 24/7</text>
+</svg>

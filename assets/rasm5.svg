@@ -1,0 +1,11 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" rx="20" fill="#F4F8FD"/>
+  <ellipse cx="200" cy="200" rx="130" ry="45" fill="#D6E6FA"/>
+  <!-- Isometric Cargo Container & Boxes -->
+  <polygon points="95,120 225,55 305,100 175,165" fill="#1D63DC" stroke="#0A2540" stroke-width="2.5"/>
+  <polygon points="175,165 305,100 305,175 175,240" fill="#0E3F99" stroke="#0A2540" stroke-width="2.5"/>
+  <polygon points="95,120 175,165 175,240 95,195" fill="#4785F2" stroke="#0A2540" stroke-width="2.5"/>
+  <!-- Gold Parcel Box Badge -->
+  <polygon points="150,85 200,60 250,85 200,110" fill="#F3C78B" stroke="#0A2540" stroke-width="2"/>
+  <text x="200" y="275" text-anchor="middle" fill="#1D63DC" font-family="sans-serif" font-size="12" font-weight="bold">rasm5 · Kargo va Konteyner Qabul</text>
+</svg>

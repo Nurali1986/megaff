@@ -1,0 +1,15 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" rx="20" fill="#F4F8FD"/>
+  <polygon points="90,190 230,115 320,165 180,240" fill="#D6E6FA"/>
+  <!-- Isometric Truck -->
+  <polygon points="100,110 220,45 280,78 160,143" fill="#1D63DC" stroke="#0A2540" stroke-width="2.5"/>
+  <polygon points="160,143 280,78 280,155 160,220" fill="#1449A6" stroke="#0A2540" stroke-width="2.5"/>
+  <polygon points="100,110 160,143 160,220 100,187" fill="#DCEBFA" stroke="#0A2540" stroke-width="2.5"/>
+  <!-- Cabin -->
+  <polygon points="235,130 280,105 320,128 275,153" fill="#FFFFFF" stroke="#0A2540" stroke-width="2.2"/>
+  <polygon points="275,153 320,128 320,175 275,200" fill="#639DF5" stroke="#0A2540" stroke-width="2.2"/>
+  <circle cx="150" cy="208" r="14" fill="#0A2540"/>
+  <circle cx="235" cy="180" r="14" fill="#0A2540"/>
+  <circle cx="290" cy="188" r="14" fill="#0A2540"/>
+  <text x="200" y="275" text-anchor="middle" fill="#1D63DC" font-family="sans-serif" font-size="12" font-weight="bold">rasm4 · Avto-logistika FBO/FBS</text>
+</svg>

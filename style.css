@@ -1,0 +1,124 @@
+/* ==========================================================================
+   MegaFulfilment (megaff.uz) — Custom Stylesheet (Pure HTML/CSS, GitHub Pages Ready)
+   ========================================================================== */
+
+body {
+  background-color: #FAF6ED;
+  color: #181623;
+  background-image: radial-gradient(#DFD3BC 0.85px, transparent 0.85px);
+  background-size: 24px 24px;
+}
+
+.dark body {
+  background-color: #110F18;
+  color: #F3EFE6;
+  background-image: radial-gradient(#292438 0.85px, transparent 0.85px);
+}
+
+.gold-gradient-btn {
+  background: linear-gradient(135deg, #C59B27 0%, #E5C158 50%, #B58A44 100%);
+  background-size: 200% auto;
+  color: #181623;
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gold-gradient-btn:hover {
+  background-position: right center;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -4px rgba(197, 155, 39, 0.45);
+}
+
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background-color: #F3EBDD;
+  border: 1px solid #DFD2BC;
+  color: #8C6A2A;
+}
+
+.dark .badge-pill {
+  background-color: #242030;
+  border-color: #383248;
+  color: #DFB743;
+}
+
+.floating-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border: 1px solid #EBE3D5;
+  border-radius: 22px;
+  box-shadow: 0 8px 30px -4px rgba(24, 22, 35, 0.05);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark .floating-card {
+  background: rgba(27, 24, 38, 0.92);
+  border-color: #2D273D;
+  box-shadow: 0 8px 30px -4px rgba(0, 0, 0, 0.45);
+}
+
+.floating-card:hover {
+  border-color: #C59B27;
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -6px rgba(181, 138, 68, 0.14);
+}
+
+.step-btn {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #F4EFE6;
+  color: #181623;
+  font-weight: 800;
+  transition: all 0.15s;
+  user-select: none;
+}
+
+.dark .step-btn {
+  background-color: #292437;
+  color: #FFFFFF;
+}
+
+.step-btn:hover {
+  background-color: #DFB743;
+  color: #181623;
+  transform: scale(1.06);
+}
+
+.active-lang {
+  background-color: #B58A44 !important;
+  color: #FFFFFF !important;
+  border-radius: 9999px;
+}
+
+.reveal-up {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.65s ease-out, transform 0.65s ease-out;
+}
+
+.reveal-up.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-float {
+  animation: floatSlow 4s ease-in-out infinite;
+}
+

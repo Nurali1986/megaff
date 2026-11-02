@@ -1,0 +1,75 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" fill="none">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="800" y2="560" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F5F9FF"/>
+      <stop offset="100%" stop-color="#DCEBFA"/>
+    </linearGradient>
+    <linearGradient id="roof" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#D6E6FA"/>
+      <stop offset="100%" stop-color="#ADC9F0"/>
+    </linearGradient>
+    <linearGradient id="blueWall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1D63DC"/>
+      <stop offset="100%" stop-color="#0E3F99"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="560" rx="28" fill="url(#bg3)"/>
+  <!-- Isometric Grid Lines -->
+  <g stroke="#C5DCF5" stroke-width="1" opacity="0.6">
+    <line x1="80" y1="420" x2="520" y2="180"/>
+    <line x1="160" y1="470" x2="600" y2="230"/>
+    <line x1="260" y1="520" x2="720" y2="270"/>
+    <line x1="220" y1="180" x2="700" y2="440"/>
+    <line x1="120" y1="240" x2="600" y2="500"/>
+  </g>
+  <!-- Ground Shadow -->
+  <polygon points="360,250 580,130 760,230 540,350" fill="#B7D1EE" opacity="0.5"/>
+  <!-- Isometric Warehouse Building -->
+  <!-- Left Front Wall -->
+  <polygon points="370,150 560,255 560,375 370,270" fill="#EAF2FC" stroke="#0A2540" stroke-width="2.5"/>
+  <!-- Right Wall -->
+  <polygon points="560,255 730,160 730,280 560,375" fill="#C9DDF6" stroke="#0A2540" stroke-width="2.5"/>
+  <!-- Roof -->
+  <polygon points="370,150 540,55 730,160 560,255" fill="url(#roof)" stroke="#0A2540" stroke-width="2.5"/>
+  <!-- Roof Skylights -->
+  <polygon points="450,140 490,118 545,148 505,170" fill="#92B8EC" stroke="#0A2540" stroke-width="1.5"/>
+  <polygon points="510,175 550,153 605,183 565,205" fill="#92B8EC" stroke="#0A2540" stroke-width="1.5"/>
+  <polygon points="570,208 610,186 665,216 625,238" fill="#92B8EC" stroke="#0A2540" stroke-width="1.5"/>
+  <!-- Blue Fascia Stripe -->
+  <polygon points="370,150 560,255 560,272 370,167" fill="#1D63DC"/>
+  <polygon points="560,255 730,160 730,177 560,272" fill="#1349A8"/>
+  <!-- Loading Dock Doors -->
+  <polygon points="405,215 455,243 455,316 405,288" fill="#0A2540"/>
+  <polygon points="475,254 525,282 525,355 475,327" fill="#0A2540"/>
+  <!-- Isometric Delivery Truck 1 (Blue Box Truck) -->
+  <g transform="translate(260, 265)">
+    <polygon points="60,35 170,-25 225,5 115,65" fill="#FFFFFF" stroke="#0A2540" stroke-width="2.2"/>
+    <polygon points="60,35 115,65 115,135 60,105" fill="#E3EEFC" stroke="#0A2540" stroke-width="2.2"/>
+    <polygon points="115,65 225,5 225,75 115,135" fill="url(#blueWall)" stroke="#0A2540" stroke-width="2.2"/>
+    <!-- Cab -->
+    <polygon points="15,80 60,55 60,105 15,130" fill="#1D63DC" stroke="#0A2540" stroke-width="2"/>
+    <polygon points="15,80 60,55 95,75 50,100" fill="#639DF5" stroke="#0A2540" stroke-width="2"/>
+    <!-- Wheels -->
+    <ellipse cx="55" cy="122" rx="12" ry="16" fill="#0A2540"/>
+    <ellipse cx="145" cy="122" rx="12" ry="16" fill="#0A2540"/>
+    <ellipse cx="195" cy="94" rx="12" ry="16" fill="#0A2540"/>
+  </g>
+  <!-- Isometric Delivery Van 2 (Left) -->
+  <g transform="translate(110, 210)">
+    <polygon points="50,50 140,0 185,25 95,75" fill="#FFFFFF" stroke="#0A2540" stroke-width="2.2"/>
+    <polygon points="95,75 185,25 185,85 95,135" fill="#1D63DC" stroke="#0A2540" stroke-width="2.2"/>
+    <polygon points="50,50 95,75 95,135 50,110" fill="#D5E6FB" stroke="#0A2540" stroke-width="2.2"/>
+    <ellipse cx="80" cy="130" rx="10" ry="14" fill="#0A2540"/>
+    <ellipse cx="155" cy="102" rx="10" ry="14" fill="#0A2540"/>
+  </g>
+  <!-- Isometric Cardboard Boxes on Pallet -->
+  <g transform="translate(525, 385)">
+    <polygon points="0,35 55,5 110,35 55,65" fill="#C89656" stroke="#0A2540" stroke-width="2"/>
+    <polygon points="15,20 55,0 95,20 55,40" fill="#F3C78B" stroke="#0A2540" stroke-width="2"/>
+    <polygon points="15,20 55,40 55,58 15,38" fill="#DDA660" stroke="#0A2540" stroke-width="2"/>
+    <polygon points="55,40 95,20 95,38 55,58" fill="#C48B45" stroke="#0A2540" stroke-width="2"/>
+  </g>
+  <!-- Label Badge -->
+  <rect x="24" y="24" width="230" height="36" rx="18" fill="#0A2540"/>
+  <text x="139" y="47" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="13" font-weight="bold">MEGA FULFILMENT 360 · rasm3</text>
+</svg>
